@@ -13,6 +13,6 @@ export default defineConfig({
     },
   },
   staged: {
-    "*": "vp check --fix",
+    "*": ["editorconfig-checker", "vp check --fix"],
   },
 });

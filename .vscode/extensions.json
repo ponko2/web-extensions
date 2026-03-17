@@ -1,3 +1,8 @@
 {
-  "recommendations": ["VoidZero.vite-plus-extension-pack", "jnoortheen.nix-ide", "mkhl.direnv"]
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "VoidZero.vite-plus-extension-pack",
+    "jnoortheen.nix-ide",
+    "mkhl.direnv"
+  ]
 }

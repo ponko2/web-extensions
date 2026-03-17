@@ -26,6 +26,7 @@
         {
           devShells.default = pkgs.mkShellNoCC {
             packages = with pkgs; [
+              editorconfig-checker
               nixfmt-rfc-style
               pnpm
             ];
