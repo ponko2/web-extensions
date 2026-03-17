@@ -16,7 +16,7 @@ catalogs:
       specifier: 2.0.8
       version: 2.0.8
     vite-plus:
-      specifier: latest
+      specifier: 0.1.12
       version: 0.1.12
 
 overrides:
