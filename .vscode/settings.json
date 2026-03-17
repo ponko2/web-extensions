@@ -8,5 +8,8 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.formatOnType": true,
-  "oxc.fmt.configPath": "./vite.config.ts"
+  "oxc.fmt.configPath": "./vite.config.ts",
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide"
+  }
 }
