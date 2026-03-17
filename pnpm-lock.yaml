@@ -49,6 +49,15 @@ importers:
         specifier: 'catalog:'
         version: 0.1.12(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(typescript@5.9.3)(vite@8.0.0(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.2))(yaml@2.8.2)
 
+  packages/refined-assistants:
+    devDependencies:
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      wxt:
+        specifier: ^0.20.20
+        version: 0.20.20(@types/node@25.5.0)(jiti@2.6.1)(typescript@5.9.3)(yaml@2.8.2)
+
   packages/refined-github:
     devDependencies:
       '@tsconfig/strictest':
