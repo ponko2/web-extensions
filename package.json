@@ -11,6 +11,13 @@
   "devDependencies": {
     "vite-plus": "catalog:"
   },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.14.0",
+      "onFail": "download"
+    }
+  },
   "engines": {
     "node": ">=22.12.0"
   },
