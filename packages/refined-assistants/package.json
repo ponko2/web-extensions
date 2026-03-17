@@ -2,7 +2,7 @@
   "name": "refined-assistants",
   "version": "0.0.0",
   "private": true,
-  "description": "manifest.json description",
+  "description": "Simplifies the AI Assistants interface and adds useful features",
   "type": "module",
   "scripts": {
     "dev": "wxt",
