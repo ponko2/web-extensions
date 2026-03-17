@@ -14,5 +14,6 @@ export default defineConfig({
   },
   staged: {
     "*": ["editorconfig-checker", "vp check --fix"],
+    "*.{yaml,yml}": "yamllint --list-files --strict",
   },
 });

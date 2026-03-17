@@ -29,6 +29,7 @@
               editorconfig-checker
               nixfmt-rfc-style
               pnpm
+              yamllint
             ];
             shellHook = ''
               pnpm install
