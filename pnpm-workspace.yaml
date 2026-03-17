@@ -1,7 +1,5 @@
 packages:
-  - apps/*
   - packages/*
-  - tools/*
 
 catalog:
   "@commitlint/cli": 20.5.0
