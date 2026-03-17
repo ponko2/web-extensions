@@ -1,3 +1,5 @@
 {
-  "extends": "./.wxt/tsconfig.json"
+  "extends": ["./.wxt/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
+  "include": ["./**/*", "./.wxt/wxt.d.ts"],
+  "exclude": [".output", "node_modules"]
 }

@@ -15,6 +15,7 @@
     "postinstall": "wxt prepare"
   },
   "devDependencies": {
+    "@tsconfig/strictest": "catalog:",
     "typescript": "catalog:",
     "wxt": "catalog:"
   }

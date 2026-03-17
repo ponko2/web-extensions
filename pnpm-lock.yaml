@@ -51,6 +51,9 @@ importers:
 
   packages/refined-assistants:
     devDependencies:
+      '@tsconfig/strictest':
+        specifier: 'catalog:'
+        version: 2.0.8
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
