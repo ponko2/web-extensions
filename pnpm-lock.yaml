@@ -12,6 +12,9 @@ catalogs:
     '@commitlint/config-conventional':
       specifier: 20.5.0
       version: 20.5.0
+    '@tsconfig/strictest':
+      specifier: 2.0.8
+      version: 2.0.8
     vite-plus:
       specifier: latest
       version: 0.1.12
@@ -30,6 +33,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: 'catalog:'
         version: 20.5.0
+      '@tsconfig/strictest':
+        specifier: 'catalog:'
+        version: 2.0.8
       node:
         specifier: runtime:^24.14.0
         version: runtime:24.14.0
@@ -565,6 +571,9 @@ packages:
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
+
+  '@tsconfig/strictest@2.0.8':
+    resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -1727,6 +1736,8 @@ snapshots:
   '@simple-libs/stream-utils@1.2.0': {}
 
   '@standard-schema/spec@1.1.0': {}
+
+  '@tsconfig/strictest@2.0.8': {}
 
   '@tybys/wasm-util@0.10.1':
     dependencies:

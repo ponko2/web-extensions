@@ -11,6 +11,7 @@
   "devDependencies": {
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
+    "@tsconfig/strictest": "catalog:",
     "vite-plus": "catalog:"
   },
   "devEngines": {

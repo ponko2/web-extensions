@@ -6,6 +6,7 @@ packages:
 catalog:
   "@commitlint/cli": 20.5.0
   "@commitlint/config-conventional": 20.5.0
+  "@tsconfig/strictest": 2.0.8
   "@types/node": ^24
   typescript: ^5
   vite: npm:@voidzero-dev/vite-plus-core@latest
