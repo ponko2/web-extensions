@@ -20,6 +20,7 @@ jobs:
       - ghalint
       - zizmor
       - check
+      - commitlint
     runs-on: ubuntu-slim
     timeout-minutes: 60
     steps:
@@ -135,3 +136,29 @@ jobs:
         run: vp install
       - name: Runs format, lint, and type checks together
         run: vp check
+  commitlint:
+    name: commitlint
+    if: ${{ github.event_name == 'pull_request' }}
+    needs: verify-author
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 50 # Assume PRs are less than 50 commits
+          filter: blob:none
+          persist-credentials: false
+      - name: Set up Vite+
+        uses: voidzero-dev/setup-vp@4a524139920f87f9f7080d3b8545acac019e1852 # v1.0.0
+        with:
+          node-version-file: package.json
+      - name: Install dependencies
+        run: vp install
+      - name: Validate all commits from PR
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: vp exec commitlint --from "$BASE_SHA" --to "$HEAD_SHA" --verbose
