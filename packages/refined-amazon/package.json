@@ -2,7 +2,7 @@
   "name": "refined-amazon",
   "version": "0.0.0",
   "private": true,
-  "description": "manifest.json description",
+  "description": "Simplifies the Amazon interface and adds useful features",
   "type": "module",
   "scripts": {
     "dev": "wxt",
