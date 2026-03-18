@@ -10,10 +10,10 @@ export default defineContentScript({
 const handleKeyDown = (event: KeyboardEvent) => {
   if (
     event.isTrusted &&
-    event.target instanceof HTMLElement &&
-    event.target.id === "prompt-textarea" &&
     event.code === "Enter" &&
-    !(event.ctrlKey || event.metaKey)
+    !(event.ctrlKey || event.metaKey) &&
+    event.target instanceof HTMLElement &&
+    event.target.id === "prompt-textarea"
   ) {
     event.preventDefault();
     event.target.dispatchEvent(

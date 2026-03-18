@@ -10,12 +10,12 @@ export default defineContentScript({
 const handleKeyDown = (event: KeyboardEvent) => {
   if (
     event.isTrusted &&
+    event.code === "Enter" &&
+    !(event.ctrlKey || event.metaKey) &&
     event.target instanceof HTMLElement &&
     event.target.tagName === "DIV" &&
     event.target.classList.contains("ql-editor") &&
-    event.target.contentEditable === "true" &&
-    event.code === "Enter" &&
-    !(event.ctrlKey || event.metaKey)
+    event.target.contentEditable === "true"
   ) {
     event.stopPropagation();
   }
