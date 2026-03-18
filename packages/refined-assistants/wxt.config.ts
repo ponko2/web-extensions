@@ -4,6 +4,11 @@ import { defineConfig } from "wxt";
 export default defineConfig({
   manifest: {
     name: "Refined Assistants",
-    host_permissions: ["*://chatgpt.com/*", "*://gemini.google.com/*"],
+    host_permissions: [
+      "*://chatgpt.com/*",
+      "*://copilot.github.com/*",
+      "*://gemini.google.com/*",
+      "*://github.com/copilot/*",
+    ],
   },
 });
