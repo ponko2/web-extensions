@@ -15,10 +15,10 @@ export type MenuItemId =
   | "changeFilesToUnreviewed"
   | "loadDiffs";
 
-export type InvokeMenuItemFunctionMessage = {
+export interface InvokeMenuItemFunctionMessage {
   type: "invokeMenuItemFunction";
   menuItemId: MenuItemId;
-};
+}
 
 const menuItems: Record<
   MenuItemId,
@@ -79,40 +79,39 @@ const menuItems: Record<
   },
 };
 
-function isMenuItemId(menuItemId: string | number): menuItemId is MenuItemId {
-  return typeof menuItemId === "string" && menuItemId in menuItems;
-}
+const isMenuItemId = (menuItemId: string | number): menuItemId is MenuItemId =>
+  typeof menuItemId === "string" && menuItemId in menuItems;
 
 // コンテキストメニューを作成
-function createContextMenus() {
+const createContextMenus = () => {
   for (const createProperties of Object.values(menuItems)) {
     browser.contextMenus.create(
       { ...createProperties, visible: false },
       () => browser.runtime.lastError,
     );
   }
-}
+};
 
 // コンテキストメニューに対応する関数を実行
-function handleContextMenuItemClick(
+const handleContextMenuItemClick = (
   { menuItemId }: Browser.contextMenus.OnClickData,
   tab: Browser.tabs.Tab | undefined,
-): void {
+): void => {
   if (typeof tab?.id === "number" && isMenuItemId(menuItemId)) {
     void browser.tabs.sendMessage(tab.id, {
       type: "invokeMenuItemFunction",
       menuItemId,
     } satisfies InvokeMenuItemFunctionMessage);
   }
-}
+};
 
 // 不要なコンテキストメニューを非表示化
-function handleToggleMenuItemVisibilityMessage({
+const handleToggleMenuItemVisibilityMessage = ({
   type,
   menuItemId,
   visible,
-}: ToggleMenuItemVisibilityMessage) {
+}: ToggleMenuItemVisibilityMessage) => {
   if (type === "toggleMenuItemVisibility") {
     void browser.contextMenus.update(menuItemId, { visible });
   }
-}
+};
