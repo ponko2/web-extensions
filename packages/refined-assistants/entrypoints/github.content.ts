@@ -10,10 +10,10 @@ export default defineContentScript({
 const handleKeyDown = (event: KeyboardEvent) => {
   if (
     event.isTrusted &&
-    event.target instanceof HTMLElement &&
-    event.target.tagName === "TEXTAREA" &&
     event.code === "Enter" &&
-    !(event.ctrlKey || event.metaKey)
+    !(event.ctrlKey || event.metaKey) &&
+    event.target instanceof HTMLElement &&
+    event.target.tagName === "TEXTAREA"
   ) {
     event.stopPropagation();
   }

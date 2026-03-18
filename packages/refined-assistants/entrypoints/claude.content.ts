@@ -1,6 +1,6 @@
 export default defineContentScript({
   runAt: "document_start",
-  matches: ["*://gemini.google.com/*"],
+  matches: ["*://claude.ai/*"],
   main() {
     document.addEventListener("keydown", handleKeyDown, { capture: true });
   },
@@ -13,8 +13,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
     event.code === "Enter" &&
     !(event.ctrlKey || event.metaKey) &&
     event.target instanceof HTMLElement &&
-    event.target.tagName === "DIV" &&
-    event.target.classList.contains("ql-editor") &&
+    event.target.dataset["testid"] === "chat-input" &&
     event.target.contentEditable === "true"
   ) {
     event.stopPropagation();
