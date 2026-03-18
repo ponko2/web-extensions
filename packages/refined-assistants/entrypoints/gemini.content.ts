@@ -9,6 +9,7 @@ export default defineContentScript({
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
 const handleKeyDown = (event: KeyboardEvent) => {
   if (
+    event.isTrusted &&
     event.target instanceof HTMLElement &&
     event.target.tagName === "DIV" &&
     event.target.classList.contains("ql-editor") &&
