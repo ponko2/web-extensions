@@ -9,11 +9,23 @@ export default defineContentScript({
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
 const handleKeyDown = (event: KeyboardEvent) => {
   if (
+    event.isTrusted &&
     event.target instanceof HTMLElement &&
-    event.target.tagName === "TEXTAREA" &&
+    event.target.id === "prompt-textarea" &&
     event.code === "Enter" &&
     !(event.ctrlKey || event.metaKey)
   ) {
-    event.stopPropagation();
+    event.preventDefault();
+    event.target.dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key: "Enter",
+        code: "Enter",
+        bubbles: true,
+        cancelable: true,
+        ctrlKey: false,
+        metaKey: false,
+        shiftKey: true,
+      }),
+    );
   }
 };
