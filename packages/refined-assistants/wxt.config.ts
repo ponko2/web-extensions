@@ -6,6 +6,7 @@ export default defineConfig({
     name: "Refined Assistants",
     host_permissions: [
       "*://chatgpt.com/*",
+      "*://claude.ai/*",
       "*://copilot.github.com/*",
       "*://gemini.google.com/*",
       "*://github.com/copilot/*",
