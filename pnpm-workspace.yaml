@@ -3,10 +3,10 @@ packages:
 allowBuilds:
   esbuild: true
   spawn-sync: true
-
 catalog:
   "@commitlint/cli": 20.5.0
   "@commitlint/config-conventional": 20.5.0
+  "@commitlint/types": 20.5.0
   "@tsconfig/strictest": 2.0.8
   "@types/node": 24.12.0
   typescript: 5.9.3

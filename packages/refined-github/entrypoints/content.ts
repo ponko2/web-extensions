@@ -11,14 +11,14 @@ export default defineContentScript({
   },
 });
 
-export type ToggleMenuItemVisibilityMessage = {
+export interface ToggleMenuItemVisibilityMessage {
   type: "toggleMenuItemVisibility";
   menuItemId: MenuItemId;
   visible: boolean;
-};
+}
 
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
-function handleKeyDown(event: KeyboardEvent) {
+const handleKeyDown = (event: KeyboardEvent) => {
   if (
     event.target instanceof HTMLElement &&
     event.target.tagName === "TEXTAREA" &&
@@ -27,7 +27,7 @@ function handleKeyDown(event: KeyboardEvent) {
   ) {
     event.stopPropagation();
   }
-}
+};
 
 const menuItems: Record<MenuItemId, () => void> = {
   /**
@@ -75,14 +75,17 @@ const menuItems: Record<MenuItemId, () => void> = {
 };
 
 // コンテキストメニューに対応する関数を実行
-function handleInvokeMenuItemFunctionMessage({ type, menuItemId }: InvokeMenuItemFunctionMessage) {
+const handleInvokeMenuItemFunctionMessage = ({
+  type,
+  menuItemId,
+}: InvokeMenuItemFunctionMessage) => {
   if (type === "invokeMenuItemFunction" && typeof menuItems[menuItemId] === "function") {
     menuItems[menuItemId]();
   }
-}
+};
 
 // 不要なコンテキストメニューを非表示化
-function toggleMenuItemVisibility() {
+const toggleMenuItemVisibility = () => {
   void browser.runtime.sendMessage({
     type: "toggleMenuItemVisibility",
     menuItemId: "toggleResolvedDetails",
@@ -118,7 +121,7 @@ function toggleMenuItemVisibility() {
     menuItemId: "loadDiffs",
     visible: hasElement(".js-diff-load"),
   } satisfies ToggleMenuItemVisibilityMessage);
-}
+};
 
 /**
  * 要素が存在するかを確認
@@ -126,32 +129,30 @@ function toggleMenuItemVisibility() {
  * @param {string} selectors セレクター
  * @returns {boolean} 要素が存在する場合はtrue
  */
-function hasElement(selectors: string): boolean {
-  return document.querySelector(selectors) !== null;
-}
+const hasElement = (selectors: string): boolean => document.querySelector(selectors) !== null;
 
 /**
  * 全ての詳細折りたたみ要素を切り替え
  *
  * @param {string} selectors セレクター
  */
-function toggleDetails(selectors: string) {
+const toggleDetails = (selectors: string) => {
   for (const element of document.querySelectorAll(selectors)) {
     if (element instanceof HTMLDetailsElement) {
       element.open = !element.open;
     }
   }
-}
+};
 
 /**
  * 全ての要素をクリック
  *
  * @param {string} selectors セレクター
  */
-function clickElements(selectors: string) {
+const clickElements = (selectors: string) => {
   for (const element of document.querySelectorAll(selectors)) {
     if (element instanceof HTMLElement) {
       element.click();
     }
   }
-}
+};

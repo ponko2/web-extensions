@@ -5,11 +5,29 @@ export default defineConfig({
     sortImports: {},
   },
   lint: {
+    categories: {
+      correctness: "error",
+      pedantic: "warn",
+      perf: "warn",
+      style: "warn",
+      suspicious: "warn",
+    },
     options: {
       denyWarnings: true,
       reportUnusedDisableDirectives: "error",
       typeAware: true,
       typeCheck: true,
+    },
+    plugins: ["eslint", "import", "jsdoc", "oxc", "promise", "typescript", "unicorn"],
+    rules: {
+      "eslint/capitalized-comments": "off",
+      "eslint/no-duplicate-imports": ["warn", { allowSeparateTypeImports: true }],
+      "eslint/no-magic-numbers": "off",
+      "eslint/sort-imports": "off",
+      "eslint/sort-keys": "off",
+      "import/exports-last": "off",
+      "import/group-exports": "off",
+      "import/no-named-export": "off",
     },
   },
   staged: {

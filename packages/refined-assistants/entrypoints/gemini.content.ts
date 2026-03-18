@@ -7,7 +7,7 @@ export default defineContentScript({
 });
 
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
-function handleKeyDown(event: KeyboardEvent) {
+const handleKeyDown = (event: KeyboardEvent) => {
   if (
     event.target instanceof HTMLElement &&
     event.target.tagName === "DIV" &&
@@ -18,4 +18,4 @@ function handleKeyDown(event: KeyboardEvent) {
   ) {
     event.stopPropagation();
   }
-}
+};
