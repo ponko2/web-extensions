@@ -23,6 +23,7 @@ export default defineConfig({
       "eslint/capitalized-comments": "off",
       "eslint/no-duplicate-imports": ["warn", { allowSeparateTypeImports: true }],
       "eslint/no-magic-numbers": "off",
+      "eslint/no-ternary": "off",
       "eslint/sort-imports": "off",
       "eslint/sort-keys": "off",
       "import/exports-last": "off",

@@ -14,6 +14,9 @@
     "compile": "tsc --noEmit",
     "postinstall": "wxt prepare"
   },
+  "dependencies": {
+    "@wxt-dev/storage": "catalog:"
+  },
   "devDependencies": {
     "@tsconfig/strictest": "catalog:",
     "typescript": "catalog:",

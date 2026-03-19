@@ -4,7 +4,8 @@ import { defineConfig } from "wxt";
 export default defineConfig({
   manifest: {
     name: "Refined Amazon",
+    action: {},
     host_permissions: ["*://www.amazon.co.jp/*"],
-    permissions: ["declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
+    permissions: ["declarativeNetRequest", "declarativeNetRequestWithHostAccess", "storage"],
   },
 });
