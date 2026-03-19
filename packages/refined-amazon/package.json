@@ -1,6 +1,6 @@
 {
   "name": "refined-amazon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Simplifies the Amazon interface and adds useful features",
   "type": "module",
@@ -13,6 +13,9 @@
     "zip:firefox": "wxt zip -b firefox",
     "compile": "tsc --noEmit",
     "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "@wxt-dev/storage": "catalog:"
   },
   "devDependencies": {
     "@tsconfig/strictest": "catalog:",

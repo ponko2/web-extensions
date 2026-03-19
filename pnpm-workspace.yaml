@@ -9,6 +9,7 @@ catalog:
   "@commitlint/types": 20.5.0
   "@tsconfig/strictest": 2.0.8
   "@types/node": 24.12.0
+  "@wxt-dev/storage": ^1.2.8
   typescript: 5.9.3
   vite: npm:@voidzero-dev/vite-plus-core@latest
   vite-plus: 0.1.12
