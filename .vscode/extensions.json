@@ -3,6 +3,7 @@
     "EditorConfig.EditorConfig",
     "VoidZero.vite-plus-extension-pack",
     "jnoortheen.nix-ide",
-    "mkhl.direnv"
+    "mkhl.direnv",
+    "ms-vscode-remote.vscode-remote-extensionpack"
   ]
 }
