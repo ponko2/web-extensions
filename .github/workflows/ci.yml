@@ -14,7 +14,6 @@ jobs:
     name: "Required Checks: CI"
     if: ${{ always() }}
     needs:
-      - verify-author
       - changed-files
       - actionlint
       - ghalint
@@ -31,21 +30,9 @@ jobs:
       - name: Fail if any required jobs failed or cancelled
         if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
         run: exit 1
-  verify-author:
-    name: Verify author
-    environment: ${{ github.event_name == 'pull_request' &&
-      endsWith(github.event.pull_request.user.login, '[bot]') &&
-      contains(github.event.pull_request.labels.*.name, 'dependencies') &&
-      contains(github.event.pull_request.labels.*.name, 'github_actions') && 'ci' || null }}
-    runs-on: ubuntu-slim
-    timeout-minutes: 60
-    steps:
-      - name: Author has been verified
-        run: exit 0
   changed-files:
     name: Get changed files
     if: ${{ github.event_name == 'pull_request' }}
-    needs: verify-author
     runs-on: ubuntu-slim
     timeout-minutes: 60
     permissions:
@@ -158,7 +145,6 @@ jobs:
         run: vp run -r build
   check:
     name: Check
-    needs: verify-author
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
@@ -179,7 +165,6 @@ jobs:
   commitlint:
     name: commitlint
     if: ${{ github.event_name == 'pull_request' }}
-    needs: verify-author
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
@@ -226,7 +211,6 @@ jobs:
         run: vp run -r compile
   editorconfig:
     name: EditorConfig
-    needs: verify-author
     runs-on: ubuntu-slim
     timeout-minutes: 60
     permissions:
