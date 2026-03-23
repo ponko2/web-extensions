@@ -139,8 +139,6 @@ jobs:
         uses: voidzero-dev/setup-vp@e1609b468742ba9232ce5e12b3a77bdf14495277 # v1.1.0
         with:
           node-version-file: package.json
-      - name: Install dependencies
-        run: vp install
       - name: Run build
         run: vp run -r build
   check:
@@ -158,8 +156,6 @@ jobs:
         uses: voidzero-dev/setup-vp@e1609b468742ba9232ce5e12b3a77bdf14495277 # v1.1.0
         with:
           node-version-file: package.json
-      - name: Install dependencies
-        run: vp install
       - name: Runs format, lint, and type checks together
         run: vp check
   commitlint:
@@ -180,8 +176,6 @@ jobs:
         uses: voidzero-dev/setup-vp@e1609b468742ba9232ce5e12b3a77bdf14495277 # v1.1.0
         with:
           node-version-file: package.json
-      - name: Install dependencies
-        run: vp install
       - name: Validate all commits from PR
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -205,8 +199,6 @@ jobs:
         uses: voidzero-dev/setup-vp@e1609b468742ba9232ce5e12b3a77bdf14495277 # v1.1.0
         with:
           node-version-file: package.json
-      - name: Install dependencies
-        run: vp install
       - name: Run compile
         run: vp run -r compile
   editorconfig:
