@@ -136,7 +136,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up Vite+
-        uses: voidzero-dev/setup-vp@fd19e0626188613eec92a77e875180c6445b56ba # v1.2.0
+        uses: voidzero-dev/setup-vp@906b5821fc79472a80264736a266e06643cca1fc # v1.2.1
         with:
           node-version-file: package.json
       - name: Run build
@@ -153,7 +153,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up Vite+
-        uses: voidzero-dev/setup-vp@fd19e0626188613eec92a77e875180c6445b56ba # v1.2.0
+        uses: voidzero-dev/setup-vp@906b5821fc79472a80264736a266e06643cca1fc # v1.2.1
         with:
           node-version-file: package.json
       - name: Runs format, lint, and type checks together
@@ -173,7 +173,7 @@ jobs:
           filter: blob:none
           persist-credentials: false
       - name: Set up Vite+
-        uses: voidzero-dev/setup-vp@fd19e0626188613eec92a77e875180c6445b56ba # v1.2.0
+        uses: voidzero-dev/setup-vp@906b5821fc79472a80264736a266e06643cca1fc # v1.2.1
         with:
           node-version-file: package.json
       - name: Validate all commits from PR
@@ -196,7 +196,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up Vite+
-        uses: voidzero-dev/setup-vp@fd19e0626188613eec92a77e875180c6445b56ba # v1.2.0
+        uses: voidzero-dev/setup-vp@906b5821fc79472a80264736a266e06643cca1fc # v1.2.1
         with:
           node-version-file: package.json
       - name: Run compile
