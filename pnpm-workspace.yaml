@@ -12,7 +12,7 @@ catalog:
   "@wxt-dev/storage": ^1.2.8
   typescript: 5.9.3
   vite: npm:@voidzero-dev/vite-plus-core@latest
-  vite-plus: 0.1.13
+  vite-plus: 0.1.14
   vitest: npm:@voidzero-dev/vite-plus-test@latest
   wxt: 0.20.20
 catalogMode: prefer
