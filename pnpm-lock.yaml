@@ -98,6 +98,22 @@ importers:
         specifier: 'catalog:'
         version: 0.20.20(@types/node@25.5.0)(jiti@2.6.1)(typescript@6.0.2)
 
+  packages/refined-google:
+    dependencies:
+      '@wxt-dev/storage':
+        specifier: 'catalog:'
+        version: 1.2.8
+    devDependencies:
+      '@tsconfig/strictest':
+        specifier: 'catalog:'
+        version: 2.0.8
+      typescript:
+        specifier: 'catalog:'
+        version: 6.0.2
+      wxt:
+        specifier: 'catalog:'
+        version: 0.20.20(@types/node@25.5.0)(jiti@2.6.1)(typescript@6.0.2)
+
 packages:
 
   '@1natsu/wait-element@4.1.2':
