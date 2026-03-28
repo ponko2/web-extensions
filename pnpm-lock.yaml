@@ -100,6 +100,9 @@ importers:
 
   packages/refined-google:
     devDependencies:
+      '@tsconfig/strictest':
+        specifier: 'catalog:'
+        version: 2.0.8
       typescript:
         specifier: 'catalog:'
         version: 6.0.2
