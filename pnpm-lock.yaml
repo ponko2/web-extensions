@@ -99,6 +99,10 @@ importers:
         version: 0.20.20(@types/node@25.5.0)(jiti@2.6.1)(typescript@6.0.2)
 
   packages/refined-google:
+    dependencies:
+      '@wxt-dev/storage':
+        specifier: 'catalog:'
+        version: 1.2.8
     devDependencies:
       '@tsconfig/strictest':
         specifier: 'catalog:'

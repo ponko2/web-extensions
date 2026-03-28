@@ -2,7 +2,7 @@
   "name": "refined-google",
   "version": "0.0.0",
   "private": true,
-  "description": "manifest.json description",
+  "description": "Simplifies the Google interface and adds useful features",
   "type": "module",
   "scripts": {
     "dev": "wxt",
@@ -13,6 +13,9 @@
     "zip:firefox": "wxt zip -b firefox",
     "compile": "tsc --noEmit",
     "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "@wxt-dev/storage": "catalog:"
   },
   "devDependencies": {
     "@tsconfig/strictest": "catalog:",
