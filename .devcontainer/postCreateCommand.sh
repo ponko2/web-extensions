@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-nix profile add nixpkgs#nix-direnv
+nix profile add nixpkgs#direnv nixpkgs#nix-direnv
+
 mkdir -p ~/.config/direnv
 echo "source ~/.nix-profile/share/nix-direnv/direnvrc" >> ~/.config/direnv/direnvrc
 
