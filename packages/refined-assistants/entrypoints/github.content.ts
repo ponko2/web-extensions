@@ -1,8 +1,8 @@
 export default defineContentScript({
   runAt: "document_start",
   matches: ["*://copilot.github.com/*", "*://github.com/copilot/*"],
-  main() {
-    document.addEventListener("keydown", handleKeyDown, { capture: true });
+  main(ctx) {
+    ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
   },
 });
 
