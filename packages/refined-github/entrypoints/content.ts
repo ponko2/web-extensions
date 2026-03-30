@@ -3,11 +3,11 @@ import type { InvokeMenuItemFunctionMessage, MenuItemId } from "~/entrypoints/ba
 export default defineContentScript({
   runAt: "document_start",
   matches: ["*://github.com/*", "*://gist.github.com/*"],
-  main() {
+  main(ctx) {
     browser.runtime.onMessage.addListener(handleInvokeMenuItemFunctionMessage);
-    document.addEventListener("keydown", handleKeyDown, { capture: true });
-    document.addEventListener("turbo:load", toggleMenuItemVisibility);
-    document.addEventListener("contextmenu", toggleMenuItemVisibility);
+    ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
+    ctx.addEventListener(document, "turbo:load", toggleMenuItemVisibility);
+    ctx.addEventListener(document, "contextmenu", toggleMenuItemVisibility);
   },
 });
 
