@@ -8,6 +8,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.formatOnType": true,
+  "js/ts.tsdk.path": "./node_modules/typescript/lib",
   "oxc.fmt.configPath": "./vite.config.ts",
   "[nix]": {
     "editor.defaultFormatter": "jnoortheen.nix-ide"

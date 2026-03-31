@@ -54,6 +54,9 @@ importers:
       node:
         specifier: runtime:^24.14.0
         version: runtime:24.14.1
+      typescript:
+        specifier: 'catalog:'
+        version: 6.0.2
       vite-plus:
         specifier: 'catalog:'
         version: 0.1.14(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1)(typescript@6.0.2)(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@types/node@25.5.0)(esbuild@0.27.4)(jiti@2.6.1))
