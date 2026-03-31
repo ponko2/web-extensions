@@ -15,6 +15,7 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
+    "@webext-core/messaging": "catalog:",
     "ts-extras": "catalog:"
   },
   "devDependencies": {

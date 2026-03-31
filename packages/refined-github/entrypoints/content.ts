@@ -1,23 +1,15 @@
 import { objectEntries } from "ts-extras";
 
-import type { InvokeMenuItemFunctionMessage } from "~/entrypoints/background";
-
 export default defineContentScript({
   runAt: "document_start",
   matches: ["*://github.com/*", "*://gist.github.com/*"],
   main(ctx) {
-    browser.runtime.onMessage.addListener(handleInvokeMenuItemFunctionMessage);
+    onMessage("invokeMenuItemFunction", onInvokeMenuItemFunction);
     ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
     ctx.addEventListener(document, "turbo:load", toggleMenuItemVisibility);
     ctx.addEventListener(document, "contextmenu", toggleMenuItemVisibility);
   },
 });
-
-export interface ToggleMenuItemVisibilityMessage {
-  type: "toggleMenuItemVisibility";
-  menuItemId: MenuItemId;
-  visible: boolean;
-}
 
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
 const handleKeyDown = (event: KeyboardEvent) => {
@@ -93,11 +85,10 @@ const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: s
 };
 
 // コンテキストメニューに対応する関数を実行
-const handleInvokeMenuItemFunctionMessage = ({
-  type,
-  menuItemId,
-}: InvokeMenuItemFunctionMessage) => {
-  if (type === "invokeMenuItemFunction" && isMenuItemId(menuItemId)) {
+const onInvokeMenuItemFunction = ({
+  data: { menuItemId },
+}: MessageOf<"invokeMenuItemFunction">) => {
+  if (isMenuItemId(menuItemId)) {
     menuItems[menuItemId].action?.();
   }
 };
@@ -105,11 +96,10 @@ const handleInvokeMenuItemFunctionMessage = ({
 // 不要なコンテキストメニューを非表示化
 const toggleMenuItemVisibility = () => {
   for (const [menuItemId, { visibilitySelector }] of objectEntries(menuItems)) {
-    void browser.runtime.sendMessage({
-      type: "toggleMenuItemVisibility",
+    void sendMessage("toggleMenuItemVisibility", {
       menuItemId,
       visible: hasElement(visibilitySelector),
-    } satisfies ToggleMenuItemVisibilityMessage);
+    });
   }
 };
 

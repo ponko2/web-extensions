@@ -9,6 +9,7 @@ catalog:
   "@commitlint/types": 20.5.0
   "@tsconfig/strictest": 2.0.8
   "@types/node": 24.12.0
+  "@webext-core/messaging": ^2.3.0
   "@wxt-dev/storage": ^1.2.8
   ts-extras: ^0.19.0
   typescript: 6.0.2
