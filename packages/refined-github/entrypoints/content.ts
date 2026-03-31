@@ -1,4 +1,4 @@
-import type { InvokeMenuItemFunctionMessage, MenuItemId } from "~/entrypoints/background";
+import type { InvokeMenuItemFunctionMessage } from "~/entrypoints/background";
 
 export default defineContentScript({
   runAt: "document_start",

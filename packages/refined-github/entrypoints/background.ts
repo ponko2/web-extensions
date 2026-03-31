@@ -6,15 +6,6 @@ export default defineBackground(() => {
   browser.runtime.onMessage.addListener(handleToggleMenuItemVisibilityMessage);
 });
 
-export type MenuItemId =
-  | "toggleResolvedDetails"
-  | "openResolvedDetails"
-  | "closeResolvedDetails"
-  | "toggleFilesToReviewed"
-  | "changeFilesToReviewed"
-  | "changeFilesToUnreviewed"
-  | "loadDiffs";
-
 export interface InvokeMenuItemFunctionMessage {
   type: "invokeMenuItemFunction";
   menuItemId: MenuItemId;
@@ -78,9 +69,6 @@ const menuItems: Record<
     ],
   },
 };
-
-const isMenuItemId = (menuItemId: string | number): menuItemId is MenuItemId =>
-  typeof menuItemId === "string" && menuItemId in menuItems;
 
 // コンテキストメニューを作成
 const createContextMenus = () => {
