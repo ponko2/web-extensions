@@ -10,3 +10,5 @@ echo "source ~/.nix-profile/share/nix-direnv/direnvrc" >> ~/.config/direnv/diren
 nix print-dev-env >/dev/null
 
 direnv allow
+
+curl -fsSL https://vite.plus | bash
