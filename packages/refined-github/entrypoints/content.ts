@@ -1,3 +1,5 @@
+import { objectEntries } from "ts-extras";
+
 import type { InvokeMenuItemFunctionMessage } from "~/entrypoints/background";
 
 export default defineContentScript({
@@ -30,11 +32,13 @@ const handleKeyDown = (event: KeyboardEvent) => {
   }
 };
 
-const menuItems: Record<MenuItemId, { action?: () => void }> = {
+const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: string }> = {
   /**
    * 解決済コメントの開閉状態を切り替え
    */
-  toggleResolvedDetails: {},
+  toggleResolvedDetails: {
+    visibilitySelector: 'details[data-resolved="true"]',
+  },
   /**
    * 解決済のコメントを全て開く
    */
@@ -42,6 +46,7 @@ const menuItems: Record<MenuItemId, { action?: () => void }> = {
     action() {
       toggleDetails('details[data-resolved="true"]:not([open])');
     },
+    visibilitySelector: 'details[data-resolved="true"]:not([open])',
   },
   /**
    * 解決済のコメントを全て閉じる
@@ -50,11 +55,14 @@ const menuItems: Record<MenuItemId, { action?: () => void }> = {
     action() {
       toggleDetails('details[data-resolved="true"][open]');
     },
+    visibilitySelector: 'details[data-resolved="true"][open]',
   },
   /**
    * ファイルの確認状態を切り替え
    */
-  toggleFilesToReviewed: {},
+  toggleFilesToReviewed: {
+    visibilitySelector: ".js-reviewed-checkbox",
+  },
   /**
    * 全てのファイルをレビュー済みに変更
    */
@@ -62,6 +70,7 @@ const menuItems: Record<MenuItemId, { action?: () => void }> = {
     action() {
       clickElements(".js-reviewed-checkbox:not(:checked)");
     },
+    visibilitySelector: ".js-reviewed-checkbox:not(:checked)",
   },
   /**
    * 全てのファイルを未レビュー状態に変更
@@ -70,6 +79,7 @@ const menuItems: Record<MenuItemId, { action?: () => void }> = {
     action() {
       clickElements(".js-reviewed-checkbox:checked");
     },
+    visibilitySelector: ".js-reviewed-checkbox:checked",
   },
   /**
    * 差分を全て読み込む
@@ -78,6 +88,7 @@ const menuItems: Record<MenuItemId, { action?: () => void }> = {
     action() {
       clickElements(".js-diff-load");
     },
+    visibilitySelector: ".js-diff-load",
   },
 };
 
@@ -93,41 +104,13 @@ const handleInvokeMenuItemFunctionMessage = ({
 
 // 不要なコンテキストメニューを非表示化
 const toggleMenuItemVisibility = () => {
-  void browser.runtime.sendMessage({
-    type: "toggleMenuItemVisibility",
-    menuItemId: "toggleResolvedDetails",
-    visible: hasElement('details[data-resolved="true"]'),
-  } satisfies ToggleMenuItemVisibilityMessage);
-  void browser.runtime.sendMessage({
-    type: "toggleMenuItemVisibility",
-    menuItemId: "openResolvedDetails",
-    visible: hasElement('details[data-resolved="true"]:not([open])'),
-  } satisfies ToggleMenuItemVisibilityMessage);
-  void browser.runtime.sendMessage({
-    type: "toggleMenuItemVisibility",
-    menuItemId: "closeResolvedDetails",
-    visible: hasElement('details[data-resolved="true"][open]'),
-  } satisfies ToggleMenuItemVisibilityMessage);
-  void browser.runtime.sendMessage({
-    type: "toggleMenuItemVisibility",
-    menuItemId: "toggleFilesToReviewed",
-    visible: hasElement(".js-reviewed-checkbox"),
-  } satisfies ToggleMenuItemVisibilityMessage);
-  void browser.runtime.sendMessage({
-    type: "toggleMenuItemVisibility",
-    menuItemId: "changeFilesToReviewed",
-    visible: hasElement(".js-reviewed-checkbox:not(:checked)"),
-  } satisfies ToggleMenuItemVisibilityMessage);
-  void browser.runtime.sendMessage({
-    type: "toggleMenuItemVisibility",
-    menuItemId: "changeFilesToUnreviewed",
-    visible: hasElement(".js-reviewed-checkbox:checked"),
-  } satisfies ToggleMenuItemVisibilityMessage);
-  void browser.runtime.sendMessage({
-    type: "toggleMenuItemVisibility",
-    menuItemId: "loadDiffs",
-    visible: hasElement(".js-diff-load"),
-  } satisfies ToggleMenuItemVisibilityMessage);
+  for (const [menuItemId, { visibilitySelector }] of objectEntries(menuItems)) {
+    void browser.runtime.sendMessage({
+      type: "toggleMenuItemVisibility",
+      menuItemId,
+      visible: hasElement(visibilitySelector),
+    } satisfies ToggleMenuItemVisibilityMessage);
+  }
 };
 
 /**
