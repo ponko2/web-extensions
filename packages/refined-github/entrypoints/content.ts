@@ -30,48 +30,54 @@ const handleKeyDown = (event: KeyboardEvent) => {
   }
 };
 
-const menuItems: Record<MenuItemId, () => void> = {
+const menuItems: Record<MenuItemId, { action?: () => void }> = {
   /**
    * 解決済コメントの開閉状態を切り替え
    */
-  toggleResolvedDetails() {
-    // do nothing
-  },
+  toggleResolvedDetails: {},
   /**
    * 解決済のコメントを全て開く
    */
-  openResolvedDetails() {
-    toggleDetails('details[data-resolved="true"]:not([open])');
+  openResolvedDetails: {
+    action() {
+      toggleDetails('details[data-resolved="true"]:not([open])');
+    },
   },
   /**
    * 解決済のコメントを全て閉じる
    */
-  closeResolvedDetails() {
-    toggleDetails('details[data-resolved="true"][open]');
+  closeResolvedDetails: {
+    action() {
+      toggleDetails('details[data-resolved="true"][open]');
+    },
   },
   /**
    * ファイルの確認状態を切り替え
    */
-  toggleFilesToReviewed() {
-    // do nothing
-  },
+  toggleFilesToReviewed: {},
   /**
    * 全てのファイルをレビュー済みに変更
    */
-  changeFilesToReviewed() {
-    clickElements(".js-reviewed-checkbox:not(:checked)");
+  changeFilesToReviewed: {
+    action() {
+      clickElements(".js-reviewed-checkbox:not(:checked)");
+    },
   },
   /**
    * 全てのファイルを未レビュー状態に変更
    */
-  changeFilesToUnreviewed() {
-    clickElements(".js-reviewed-checkbox:checked");
+  changeFilesToUnreviewed: {
+    action() {
+      clickElements(".js-reviewed-checkbox:checked");
+    },
   },
   /**
    * 差分を全て読み込む
    */
-  loadDiffs() {
-    clickElements(".js-diff-load");
+  loadDiffs: {
+    action() {
+      clickElements(".js-diff-load");
+    },
   },
 };
 
@@ -80,8 +86,8 @@ const handleInvokeMenuItemFunctionMessage = ({
   type,
   menuItemId,
 }: InvokeMenuItemFunctionMessage) => {
-  if (type === "invokeMenuItemFunction" && typeof menuItems[menuItemId] === "function") {
-    menuItems[menuItemId]();
+  if (type === "invokeMenuItemFunction" && isMenuItemId(menuItemId)) {
+    menuItems[menuItemId].action?.();
   }
 };
 
