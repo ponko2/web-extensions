@@ -1,24 +1,10 @@
-import type { ToggleMenuItemVisibilityMessage } from "~/entrypoints/content";
+import { objectValues } from "ts-extras";
 
 export default defineBackground(() => {
   createContextMenus();
   browser.contextMenus.onClicked.addListener(handleContextMenuItemClick);
-  browser.runtime.onMessage.addListener(handleToggleMenuItemVisibilityMessage);
+  onMessage("toggleMenuItemVisibility", onToggleMenuItemVisibility);
 });
-
-export type MenuItemId =
-  | "toggleResolvedDetails"
-  | "openResolvedDetails"
-  | "closeResolvedDetails"
-  | "toggleFilesToReviewed"
-  | "changeFilesToReviewed"
-  | "changeFilesToUnreviewed"
-  | "loadDiffs";
-
-export interface InvokeMenuItemFunctionMessage {
-  type: "invokeMenuItemFunction";
-  menuItemId: MenuItemId;
-}
 
 const menuItems: Record<
   MenuItemId,
@@ -79,12 +65,9 @@ const menuItems: Record<
   },
 };
 
-const isMenuItemId = (menuItemId: string | number): menuItemId is MenuItemId =>
-  typeof menuItemId === "string" && menuItemId in menuItems;
-
 // コンテキストメニューを作成
 const createContextMenus = () => {
-  for (const createProperties of Object.values(menuItems)) {
+  for (const createProperties of objectValues(menuItems)) {
     browser.contextMenus.create(
       { ...createProperties, visible: false },
       () => browser.runtime.lastError,
@@ -96,22 +79,15 @@ const createContextMenus = () => {
 const handleContextMenuItemClick = (
   { menuItemId }: Browser.contextMenus.OnClickData,
   tab: Browser.tabs.Tab | undefined,
-): void => {
-  if (typeof tab?.id === "number" && isMenuItemId(menuItemId)) {
-    void browser.tabs.sendMessage(tab.id, {
-      type: "invokeMenuItemFunction",
-      menuItemId,
-    } satisfies InvokeMenuItemFunctionMessage);
+) => {
+  if (tab?.id !== undefined) {
+    void sendMessage("invokeMenuItemFunction", { menuItemId }, { tabId: tab.id });
   }
 };
 
 // 不要なコンテキストメニューを非表示化
-const handleToggleMenuItemVisibilityMessage = ({
-  type,
-  menuItemId,
-  visible,
-}: ToggleMenuItemVisibilityMessage) => {
-  if (type === "toggleMenuItemVisibility") {
-    void browser.contextMenus.update(menuItemId, { visible });
-  }
+const onToggleMenuItemVisibility = ({
+  data: { menuItemId, visible },
+}: MessageOf<"toggleMenuItemVisibility">) => {
+  void browser.contextMenus.update(menuItemId, { visible });
 };
