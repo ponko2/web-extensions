@@ -1,3 +1,5 @@
+import { objectValues } from "ts-extras";
+
 import type { ToggleMenuItemVisibilityMessage } from "~/entrypoints/content";
 
 export default defineBackground(() => {
@@ -72,7 +74,7 @@ const menuItems: Record<
 
 // コンテキストメニューを作成
 const createContextMenus = () => {
-  for (const createProperties of Object.values(menuItems)) {
+  for (const createProperties of objectValues(menuItems)) {
     browser.contextMenus.create(
       { ...createProperties, visible: false },
       () => browser.runtime.lastError,
