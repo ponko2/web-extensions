@@ -20,6 +20,7 @@ export interface ToggleMenuItemVisibilityMessage {
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
 const handleKeyDown = (event: KeyboardEvent) => {
   if (
+    event.isTrusted &&
     event.target instanceof HTMLElement &&
     event.target.tagName === "TEXTAREA" &&
     event.code === "Enter" &&
