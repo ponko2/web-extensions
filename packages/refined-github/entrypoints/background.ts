@@ -1,11 +1,5 @@
 import { objectValues } from "ts-extras";
 
-export default defineBackground(() => {
-  createContextMenus();
-  browser.contextMenus.onClicked.addListener(handleContextMenuItemClick);
-  onMessage("toggleMenuItemVisibility", onToggleMenuItemVisibility);
-});
-
 const menuItems: Record<
   MenuItemId,
   { id: MenuItemId } & Omit<Browser.contextMenus.CreateProperties, "id">
@@ -91,3 +85,9 @@ const onToggleMenuItemVisibility = ({
 }: MessageOf<"toggleMenuItemVisibility">) => {
   void browser.contextMenus.update(menuItemId, { visible });
 };
+
+export default defineBackground(() => {
+  createContextMenus();
+  browser.contextMenus.onClicked.addListener(handleContextMenuItemClick);
+  onMessage("toggleMenuItemVisibility", onToggleMenuItemVisibility);
+});

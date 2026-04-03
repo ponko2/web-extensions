@@ -1,11 +1,3 @@
-export default defineContentScript({
-  runAt: "document_start",
-  matches: ["*://gemini.google.com/*"],
-  main(ctx) {
-    ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
-  },
-});
-
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
 const handleKeyDown = (event: KeyboardEvent) => {
   if (
@@ -20,3 +12,11 @@ const handleKeyDown = (event: KeyboardEvent) => {
     event.stopPropagation();
   }
 };
+
+export default defineContentScript({
+  runAt: "document_start",
+  matches: ["*://gemini.google.com/*"],
+  main(ctx) {
+    ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
+  },
+});
