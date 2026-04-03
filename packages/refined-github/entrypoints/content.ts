@@ -6,11 +6,11 @@ import { objectEntries } from "ts-extras";
  * @param {string[]} selectors セレクター
  */
 const clickElements = (selectors: string[]) => {
-  for (const element of document.querySelectorAll(selectors.join(","))) {
+  document.querySelectorAll(selectors.join(",")).forEach((element) => {
     if (element instanceof HTMLElement) {
       element.click();
     }
-  }
+  });
 };
 
 /**
@@ -19,11 +19,11 @@ const clickElements = (selectors: string[]) => {
  * @param {string[]} selectors セレクター
  */
 const toggleDetails = (selectors: string[]) => {
-  for (const element of document.querySelectorAll(selectors.join(","))) {
+  document.querySelectorAll(selectors.join(",")).forEach((element) => {
     if (element instanceof HTMLDetailsElement) {
       element.open = !element.open;
     }
-  }
+  });
 };
 
 const menuItems: Record<
