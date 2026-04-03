@@ -14,7 +14,7 @@ catalog:
   ts-extras: ^0.19.0
   typescript: 6.0.2
   vite: npm:@voidzero-dev/vite-plus-core@latest
-  vite-plus: 0.1.14
+  vite-plus: 0.1.15
   vitest: npm:@voidzero-dev/vite-plus-test@latest
   wxt: 0.20.20
 catalogMode: prefer
