@@ -26,7 +26,7 @@ const toggleDetails = (selectors: string) => {
   }
 };
 
-const menuItems: Record<MenuItemId, { action?: () => void; selectors: string }> = {
+const menuItems: Record<MenuItemId, { action?: (selectors: string) => void; selectors: string }> = {
   /**
    * 解決済コメントの開閉状態を切り替え
    */
@@ -37,18 +37,14 @@ const menuItems: Record<MenuItemId, { action?: () => void; selectors: string }> 
    * 解決済のコメントを全て開く
    */
   openResolvedDetails: {
-    action() {
-      toggleDetails('details[data-resolved="true"]:not([open])');
-    },
+    action: toggleDetails,
     selectors: 'details[data-resolved="true"]:not([open])',
   },
   /**
    * 解決済のコメントを全て閉じる
    */
   closeResolvedDetails: {
-    action() {
-      toggleDetails('details[data-resolved="true"][open]');
-    },
+    action: toggleDetails,
     selectors: 'details[data-resolved="true"][open]',
   },
   /**
@@ -61,27 +57,21 @@ const menuItems: Record<MenuItemId, { action?: () => void; selectors: string }> 
    * 全てのファイルをレビュー済みに変更
    */
   changeFilesToReviewed: {
-    action() {
-      clickElements(".js-reviewed-checkbox:not(:checked)");
-    },
+    action: clickElements,
     selectors: ".js-reviewed-checkbox:not(:checked)",
   },
   /**
    * 全てのファイルを未レビュー状態に変更
    */
   changeFilesToUnreviewed: {
-    action() {
-      clickElements(".js-reviewed-checkbox:checked");
-    },
+    action: clickElements,
     selectors: ".js-reviewed-checkbox:checked",
   },
   /**
    * 差分を全て読み込む
    */
   loadDiffs: {
-    action() {
-      clickElements(".js-diff-load");
-    },
+    action: clickElements,
     selectors: ".js-diff-load",
   },
 };
@@ -99,7 +89,8 @@ const onInvokeMenuItemFunction = ({
   data: { menuItemId },
 }: MessageOf<"invokeMenuItemFunction">) => {
   if (isMenuItemId(menuItemId)) {
-    menuItems[menuItemId].action?.();
+    const { action, selectors } = menuItems[menuItemId];
+    action?.(selectors);
   }
 };
 
