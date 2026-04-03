@@ -25,6 +25,7 @@ const menuItems: Record<
     id: "toggleFilesToReviewed",
     title: "ファイルの確認状態を切り替え",
     documentUrlPatterns: [
+      "https://github.com/*/pull/*/changes",
       "https://github.com/*/pull/*/files",
       "https://github.com/*/pull/*/files?*",
     ],
@@ -34,6 +35,7 @@ const menuItems: Record<
     id: "changeFilesToReviewed",
     title: "全て確認済みに変更",
     documentUrlPatterns: [
+      "https://github.com/*/pull/*/changes",
       "https://github.com/*/pull/*/files",
       "https://github.com/*/pull/*/files?*",
     ],
@@ -43,6 +45,7 @@ const menuItems: Record<
     id: "changeFilesToUnreviewed",
     title: "全て未確認に変更",
     documentUrlPatterns: [
+      "https://github.com/*/pull/*/changes",
       "https://github.com/*/pull/*/files",
       "https://github.com/*/pull/*/files?*",
     ],
@@ -52,9 +55,10 @@ const menuItems: Record<
     title: "差分を全て読み込む",
     documentUrlPatterns: [
       "https://github.com/*/commit/*",
+      "https://github.com/*/pull/*/changes",
+      "https://github.com/*/pull/*/commits/*",
       "https://github.com/*/pull/*/files",
       "https://github.com/*/pull/*/files?*",
-      "https://github.com/*/pull/*/commits/*",
     ],
   },
 };

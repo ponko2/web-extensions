@@ -57,28 +57,34 @@ const menuItems: Record<
    * ファイルの確認状態を切り替え
    */
   toggleFilesToReviewed: {
-    selectors: [".js-reviewed-checkbox"],
+    selectors: ['button[class*="MarkAsViewedButton"]', "input.js-reviewed-checkbox"],
   },
   /**
    * 全てのファイルをレビュー済みに変更
    */
   changeFilesToReviewed: {
     action: clickElements,
-    selectors: [".js-reviewed-checkbox:not(:checked)"],
+    selectors: [
+      'button[class*="MarkAsViewedButton"][aria-pressed="false"]',
+      "input.js-reviewed-checkbox:not(:checked)",
+    ],
   },
   /**
    * 全てのファイルを未レビュー状態に変更
    */
   changeFilesToUnreviewed: {
     action: clickElements,
-    selectors: [".js-reviewed-checkbox:checked"],
+    selectors: [
+      'button[class*="MarkAsViewedButton"][aria-pressed="true"]',
+      "input.js-reviewed-checkbox:checked",
+    ],
   },
   /**
    * 差分を全て読み込む
    */
   loadDiffs: {
     action: clickElements,
-    selectors: [".js-diff-load"],
+    selectors: ['[class^="HiddenDiffPatch"] button', ".js-file .js-diff-load"],
   },
 };
 
