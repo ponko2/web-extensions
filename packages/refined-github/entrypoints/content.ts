@@ -3,10 +3,10 @@ import { objectEntries } from "ts-extras";
 /**
  * 全ての要素をクリック
  *
- * @param {string} selectors セレクター
+ * @param {string[]} selectors セレクター
  */
-const clickElements = (selectors: string) => {
-  for (const element of document.querySelectorAll(selectors)) {
+const clickElements = (selectors: string[]) => {
+  for (const element of document.querySelectorAll(selectors.join(","))) {
     if (element instanceof HTMLElement) {
       element.click();
     }
@@ -16,73 +16,80 @@ const clickElements = (selectors: string) => {
 /**
  * 全ての詳細折りたたみ要素を切り替え
  *
- * @param {string} selectors セレクター
+ * @param {string[]} selectors セレクター
  */
-const toggleDetails = (selectors: string) => {
-  for (const element of document.querySelectorAll(selectors)) {
+const toggleDetails = (selectors: string[]) => {
+  for (const element of document.querySelectorAll(selectors.join(","))) {
     if (element instanceof HTMLDetailsElement) {
       element.open = !element.open;
     }
   }
 };
 
-const menuItems: Record<MenuItemId, { action?: (selectors: string) => void; selectors: string }> = {
+const menuItems: Record<
+  MenuItemId,
+  {
+    action?: (selectors: string[]) => void;
+    selectors: string[];
+  }
+> = {
   /**
    * 解決済コメントの開閉状態を切り替え
    */
   toggleResolvedDetails: {
-    selectors: 'details[data-resolved="true"]',
+    selectors: ['details[data-resolved="true"]'],
   },
   /**
    * 解決済のコメントを全て開く
    */
   openResolvedDetails: {
     action: toggleDetails,
-    selectors: 'details[data-resolved="true"]:not([open])',
+    selectors: ['details[data-resolved="true"]:not([open])'],
   },
   /**
    * 解決済のコメントを全て閉じる
    */
   closeResolvedDetails: {
     action: toggleDetails,
-    selectors: 'details[data-resolved="true"][open]',
+    selectors: ['details[data-resolved="true"][open]'],
   },
   /**
    * ファイルの確認状態を切り替え
    */
   toggleFilesToReviewed: {
-    selectors: ".js-reviewed-checkbox",
+    selectors: [".js-reviewed-checkbox"],
   },
   /**
    * 全てのファイルをレビュー済みに変更
    */
   changeFilesToReviewed: {
     action: clickElements,
-    selectors: ".js-reviewed-checkbox:not(:checked)",
+    selectors: [".js-reviewed-checkbox:not(:checked)"],
   },
   /**
    * 全てのファイルを未レビュー状態に変更
    */
   changeFilesToUnreviewed: {
     action: clickElements,
-    selectors: ".js-reviewed-checkbox:checked",
+    selectors: [".js-reviewed-checkbox:checked"],
   },
   /**
    * 差分を全て読み込む
    */
   loadDiffs: {
     action: clickElements,
-    selectors: ".js-diff-load",
+    selectors: [".js-diff-load"],
   },
 };
 
 /**
  * 要素が存在するかを確認
  *
- * @param {string} selectors セレクター
+ * @param {string[]} selectors セレクター
  * @returns {boolean} 要素が存在する場合はtrue
  */
-const hasElement = (selectors: string): boolean => document.querySelector(selectors) !== null;
+const hasElement = (selectors: string[]): boolean =>
+  document.querySelector(selectors.join(",")) !== null;
 
 // コンテキストメニューに対応する関数を実行
 const onInvokeMenuItemFunction = ({
