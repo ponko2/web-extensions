@@ -26,12 +26,12 @@ const toggleDetails = (selectors: string) => {
   }
 };
 
-const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: string }> = {
+const menuItems: Record<MenuItemId, { action?: () => void; selectors: string }> = {
   /**
    * 解決済コメントの開閉状態を切り替え
    */
   toggleResolvedDetails: {
-    visibilitySelector: 'details[data-resolved="true"]',
+    selectors: 'details[data-resolved="true"]',
   },
   /**
    * 解決済のコメントを全て開く
@@ -40,7 +40,7 @@ const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: s
     action() {
       toggleDetails('details[data-resolved="true"]:not([open])');
     },
-    visibilitySelector: 'details[data-resolved="true"]:not([open])',
+    selectors: 'details[data-resolved="true"]:not([open])',
   },
   /**
    * 解決済のコメントを全て閉じる
@@ -49,13 +49,13 @@ const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: s
     action() {
       toggleDetails('details[data-resolved="true"][open]');
     },
-    visibilitySelector: 'details[data-resolved="true"][open]',
+    selectors: 'details[data-resolved="true"][open]',
   },
   /**
    * ファイルの確認状態を切り替え
    */
   toggleFilesToReviewed: {
-    visibilitySelector: ".js-reviewed-checkbox",
+    selectors: ".js-reviewed-checkbox",
   },
   /**
    * 全てのファイルをレビュー済みに変更
@@ -64,7 +64,7 @@ const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: s
     action() {
       clickElements(".js-reviewed-checkbox:not(:checked)");
     },
-    visibilitySelector: ".js-reviewed-checkbox:not(:checked)",
+    selectors: ".js-reviewed-checkbox:not(:checked)",
   },
   /**
    * 全てのファイルを未レビュー状態に変更
@@ -73,7 +73,7 @@ const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: s
     action() {
       clickElements(".js-reviewed-checkbox:checked");
     },
-    visibilitySelector: ".js-reviewed-checkbox:checked",
+    selectors: ".js-reviewed-checkbox:checked",
   },
   /**
    * 差分を全て読み込む
@@ -82,7 +82,7 @@ const menuItems: Record<MenuItemId, { action?: () => void; visibilitySelector: s
     action() {
       clickElements(".js-diff-load");
     },
-    visibilitySelector: ".js-diff-load",
+    selectors: ".js-diff-load",
   },
 };
 
@@ -118,10 +118,10 @@ const handleKeyDown = (event: KeyboardEvent) => {
 
 // 不要なコンテキストメニューを非表示化
 const toggleMenuItemVisibility = () => {
-  for (const [menuItemId, { visibilitySelector }] of objectEntries(menuItems)) {
+  for (const [menuItemId, { selectors }] of objectEntries(menuItems)) {
     void sendMessage("toggleMenuItemVisibility", {
       menuItemId,
-      visible: hasElement(visibilitySelector),
+      visible: hasElement(selectors),
     });
   }
 };
