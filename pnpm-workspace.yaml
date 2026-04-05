@@ -21,6 +21,8 @@ catalogMode: prefer
 overrides:
   vite: "catalog:"
   vitest: "catalog:"
+patchedDependencies:
+  "@webext-core/messaging@2.3.0": patches/@webext-core__messaging@2.3.0.patch
 peerDependencyRules:
   allowAny:
     - vite

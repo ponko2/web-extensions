@@ -41,6 +41,11 @@ overrides:
   vite: npm:@voidzero-dev/vite-plus-core@latest
   vitest: npm:@voidzero-dev/vite-plus-test@latest
 
+patchedDependencies:
+  '@webext-core/messaging@2.3.0':
+    hash: 8a9a3fd067a224b85054976683136151402d075bfd90a41b308d908bd8577dcf
+    path: patches/@webext-core__messaging@2.3.0.patch
+
 importers:
 
   .:
@@ -99,7 +104,7 @@ importers:
     dependencies:
       '@webext-core/messaging':
         specifier: 'catalog:'
-        version: 2.3.0
+        version: 2.3.0(patch_hash=8a9a3fd067a224b85054976683136151402d075bfd90a41b308d908bd8577dcf)
       ts-extras:
         specifier: 'catalog:'
         version: 0.19.0
@@ -3285,7 +3290,7 @@ snapshots:
 
   '@webext-core/match-patterns@1.0.3': {}
 
-  '@webext-core/messaging@2.3.0':
+  '@webext-core/messaging@2.3.0(patch_hash=8a9a3fd067a224b85054976683136151402d075bfd90a41b308d908bd8577dcf)':
     dependencies:
       serialize-error: 11.0.3
       uid: 2.0.2
