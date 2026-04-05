@@ -1,31 +1,5 @@
 import { objectEntries } from "ts-extras";
 
-/**
- * 全ての要素をクリック
- *
- * @param {string[]} selectors セレクター
- */
-const clickElements = (selectors: string[]) => {
-  document.querySelectorAll(selectors.join(",")).forEach((element) => {
-    if (element instanceof HTMLElement) {
-      element.click();
-    }
-  });
-};
-
-/**
- * 全ての詳細折りたたみ要素を切り替え
- *
- * @param {string[]} selectors セレクター
- */
-const toggleDetails = (selectors: string[]) => {
-  document.querySelectorAll(selectors.join(",")).forEach((element) => {
-    if (element instanceof HTMLDetailsElement) {
-      element.open = !element.open;
-    }
-  });
-};
-
 const menuItems: Record<
   MenuItemId,
   {
@@ -87,15 +61,6 @@ const menuItems: Record<
     selectors: ['[class^="HiddenDiffPatch"] button', ".js-file .js-diff-load"],
   },
 };
-
-/**
- * 要素が存在するかを確認
- *
- * @param {string[]} selectors セレクター
- * @returns {boolean} 要素が存在する場合はtrue
- */
-const hasElement = (selectors: string[]): boolean =>
-  document.querySelector(selectors.join(",")) !== null;
 
 // コンテキストメニューに対応する関数を実行
 const onInvokeMenuItemFunction = ({
