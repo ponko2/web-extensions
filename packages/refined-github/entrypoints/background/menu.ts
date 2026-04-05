@@ -64,7 +64,7 @@ const menuItems: Record<
 };
 
 // コンテキストメニューを作成
-const createContextMenus = () => {
+export const createContextMenus = () => {
   for (const createProperties of objectValues(menuItems)) {
     browser.contextMenus.create(
       { ...createProperties, visible: false },
@@ -74,7 +74,7 @@ const createContextMenus = () => {
 };
 
 // コンテキストメニューに対応する関数を実行
-const handleContextMenuItemClick = (
+export const handleContextMenuItemClick = (
   { menuItemId }: Browser.contextMenus.OnClickData,
   tab: Browser.tabs.Tab | undefined,
 ) => {
@@ -84,14 +84,8 @@ const handleContextMenuItemClick = (
 };
 
 // 不要なコンテキストメニューを非表示化
-const onToggleMenuItemVisibility = ({
+export const onToggleMenuItemVisibility = ({
   data: { menuItemId, visible },
 }: MessageOf<"toggleMenuItemVisibility">) => {
   void browser.contextMenus.update(menuItemId, { visible });
 };
-
-export default defineBackground(() => {
-  createContextMenus();
-  browser.contextMenus.onClicked.addListener(handleContextMenuItemClick);
-  onMessage("toggleMenuItemVisibility", onToggleMenuItemVisibility);
-});
