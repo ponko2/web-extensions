@@ -29,6 +29,7 @@ export default defineConfig({
       "import/exports-last": "off",
       "import/group-exports": "off",
       "import/no-named-export": "off",
+      "import/prefer-default-export": "off",
     },
   },
   staged: {

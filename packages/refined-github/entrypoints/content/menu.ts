@@ -63,7 +63,7 @@ const menuItems: Record<
 };
 
 // コンテキストメニューに対応する関数を実行
-const onInvokeMenuItemFunction = ({
+export const onInvokeMenuItemFunction = ({
   data: { menuItemId },
 }: MessageOf<"invokeMenuItemFunction">) => {
   if (isMenuItemId(menuItemId)) {
@@ -72,21 +72,8 @@ const onInvokeMenuItemFunction = ({
   }
 };
 
-// Form入力中にEnterで意図せずSubmitしてしまう問題を回避
-const handleKeyDown = (event: KeyboardEvent) => {
-  if (
-    event.isTrusted &&
-    event.code === "Enter" &&
-    !(event.ctrlKey || event.metaKey) &&
-    event.target instanceof HTMLElement &&
-    event.target.tagName === "TEXTAREA"
-  ) {
-    event.stopPropagation();
-  }
-};
-
 // 不要なコンテキストメニューを非表示化
-const toggleMenuItemVisibility = () => {
+export const toggleMenuItemVisibility = () => {
   for (const [menuItemId, { selectors }] of objectEntries(menuItems)) {
     void sendMessage("toggleMenuItemVisibility", {
       menuItemId,
@@ -94,14 +81,3 @@ const toggleMenuItemVisibility = () => {
     });
   }
 };
-
-export default defineContentScript({
-  runAt: "document_start",
-  matches: ["*://github.com/*", "*://gist.github.com/*"],
-  main(ctx) {
-    onMessage("invokeMenuItemFunction", onInvokeMenuItemFunction);
-    ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
-    ctx.addEventListener(document, "turbo:load", toggleMenuItemVisibility);
-    ctx.addEventListener(document, "contextmenu", toggleMenuItemVisibility);
-  },
-});
