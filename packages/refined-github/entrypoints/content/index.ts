@@ -2,7 +2,7 @@ import { preventUnexpectedTextareaSubmit } from "./form";
 import { onInvokeMenuItemFunction, toggleMenuItemVisibility } from "./menu";
 
 export default defineContentScript({
-  runAt: "document_start",
+  runAt: "document_end",
   matches: ["*://github.com/*", "*://gist.github.com/*"],
   main(ctx) {
     onMessage("invokeMenuItemFunction", onInvokeMenuItemFunction);

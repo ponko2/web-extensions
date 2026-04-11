@@ -14,7 +14,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
 };
 
 export default defineContentScript({
-  runAt: "document_start",
+  runAt: "document_end",
   matches: ["*://gemini.google.com/*"],
   main(ctx) {
     ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
