@@ -9,6 +9,15 @@
   "editor.formatOnSaveMode": "file",
   "editor.formatOnType": true,
   "js/ts.tsdk.path": "./node_modules/typescript/lib",
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nixd",
+  "nix.serverSettings": {
+    "nixd": {
+      "formatting": {
+        "command": ["nixfmt"]
+      }
+    }
+  },
   "oxc.fmt.configPath": "./vite.config.ts",
   "[nix]": {
     "editor.defaultFormatter": "jnoortheen.nix-ide"

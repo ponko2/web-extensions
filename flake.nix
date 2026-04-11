@@ -24,11 +24,24 @@
           '';
         in
         {
+          apps = {
+            deadnix = {
+              type = "app";
+              program = "${pkgs.deadnix}/bin/deadnix";
+            };
+            statix = {
+              type = "app";
+              program = "${pkgs.statix}/bin/statix";
+            };
+          };
           devShells.default = pkgs.mkShellNoCC {
             packages = with pkgs; [
+              deadnix
               editorconfig-checker
+              nixd
               nixfmt-rfc-style
               pnpm
+              statix
               yamllint
             ];
             shellHook = ''
