@@ -30,6 +30,8 @@ export default defineConfig({
       "import/group-exports": "off",
       "import/no-named-export": "off",
       "import/prefer-default-export": "off",
+      "promise/prefer-await-to-callbacks": "off",
+      "unicorn/prefer-global-this": "off",
     },
   },
   staged: {
