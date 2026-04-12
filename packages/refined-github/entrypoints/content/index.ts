@@ -4,14 +4,14 @@ import { preventUnexpectedTextareaSubmit } from "./form";
 import { onInvokeMenuItemFunction, toggleMenuItemVisibility } from "./menu";
 
 const watchDOM = (ctx: ContentScriptContext, target: Node, callback: () => void) => {
-  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  let timeoutId = 0;
   const observer = new MutationObserver(() => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(callback, 200);
+    window.clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(callback, 200);
   });
   observer.observe(target, { childList: true, subtree: true });
   ctx.onInvalidated(() => {
-    clearTimeout(timeoutId);
+    window.clearTimeout(timeoutId);
     observer.disconnect();
   });
   callback();
