@@ -1,8 +1,8 @@
 {
-  "name": "refined-amazon",
-  "version": "0.2.0",
+  "name": "and-emi-an1vrqenfrjn5",
+  "version": "0.1.0",
   "private": true,
-  "description": "Simplifies the Amazon interface and adds useful features",
+  "description": "Automatically adds `&emi=AN1VRQENFRJN5` to Amazon search URLs.",
   "type": "module",
   "scripts": {
     "dev": "wxt",
