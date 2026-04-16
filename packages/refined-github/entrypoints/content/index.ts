@@ -1,6 +1,5 @@
 import type { ContentScriptContext } from "wxt/utils/content-script-context";
 
-import { preventUnexpectedTextareaSubmit } from "./form";
 import { onInvokeMenuItemFunction, toggleMenuItemVisibility } from "./menu";
 
 const watchDOM = (ctx: ContentScriptContext, target: Node, callback: () => void) => {
@@ -23,6 +22,5 @@ export default defineContentScript({
   main(ctx) {
     onMessage("invokeMenuItemFunction", onInvokeMenuItemFunction);
     watchDOM(ctx, document.body, toggleMenuItemVisibility);
-    ctx.addEventListener(document, "keydown", preventUnexpectedTextareaSubmit, { capture: true });
   },
 });
