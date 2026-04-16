@@ -1,6 +1,9 @@
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
 const handleKeyDown = (event: KeyboardEvent) => {
+  // oxlint-disable-next-line typescript/no-deprecated
+  const isComposing = event.isComposing || event.keyCode === 229;
   if (
+    !isComposing &&
     event.isTrusted &&
     event.code === "Enter" &&
     !(event.ctrlKey || event.metaKey) &&
