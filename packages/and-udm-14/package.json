@@ -1,8 +1,8 @@
 {
-  "name": "refined-google",
+  "name": "and-udm-14",
   "version": "0.1.0",
   "private": true,
-  "description": "Simplifies the Google interface and adds useful features",
+  "description": "Automatically adds `&udm=14` to Google search URLs.",
   "type": "module",
   "scripts": {
     "dev": "wxt",
