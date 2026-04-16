@@ -1,8 +1,8 @@
 {
-  "name": "refined-assistants",
-  "version": "0.2.0",
+  "name": "prevent-accidental-submit",
+  "version": "0.1.0",
   "private": true,
-  "description": "Simplifies the AI Assistants interface and adds useful features",
+  "description": "Prevent accidental form submissions by disabling Enter-to-submit and using Ctrl/Cmd+Enter instead.",
   "type": "module",
   "scripts": {
     "dev": "wxt",
