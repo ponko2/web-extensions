@@ -14,4 +14,4 @@ Click all matching elements at once with Alt+Click.
 
 ## [Prevent Accidental Submit](packages/prevent-accidental-submit)
 
-Prevent accidental form submissions by disabling Enter-to-submit and using Ctrl/Cmd+Enter instead.
+Prevent accidental form submissions by disabling Enter-to-submit behavior and using Ctrl/Cmd + Enter for submission.
