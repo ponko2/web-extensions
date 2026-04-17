@@ -34,8 +34,8 @@ catalogs:
       specifier: 0.1.16
       version: 0.1.16
     wxt:
-      specifier: 0.20.21
-      version: 0.20.21
+      specifier: 0.20.22
+      version: 0.20.22
 
 overrides:
   vite: npm:@voidzero-dev/vite-plus-core@latest
@@ -86,7 +86,7 @@ importers:
         version: 6.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.20.21(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
+        version: 0.20.22(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
 
   packages/and-udm-14:
     dependencies:
@@ -102,7 +102,7 @@ importers:
         version: 6.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.20.21(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
+        version: 0.20.22(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
 
   packages/prevent-accidental-submit:
     devDependencies:
@@ -114,7 +114,7 @@ importers:
         version: 6.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.20.21(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
+        version: 0.20.22(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
 
   packages/refined-github:
     dependencies:
@@ -133,7 +133,7 @@ importers:
         version: 6.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.20.21(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
+        version: 0.20.22(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2)
 
 packages:
 
@@ -2660,8 +2660,8 @@ packages:
     resolution: {integrity: sha512-g/eziiSUNBSsdDJtCLB8bdYEUMj4jR7AGeUo96p/3dTafgjHhpF4RiCFPiRILwjQoDXx5MqkBr4fwWtR3Ky4Wg==}
     engines: {node: '>=20'}
 
-  wxt@0.20.21:
-    resolution: {integrity: sha512-rDocJ9QEWKnGd7NTTTxKIJ5MsXwv9lXk4/ITFS9eeksTCYotshxzAiptkRPEHCgsJNiGMNY/UFNxVDyqWGe7Bw==}
+  wxt@0.20.22:
+    resolution: {integrity: sha512-njFI77H0dAbK/bQCN8u8QYiusg6GKDPMtsQDCqIfrh1oGHMHgrMEMgeGOlqAltG9OOGGB1DvFYDzTvxqfEKVKQ==}
     engines: {bun: '>=1.2.0', node: '>=20.12.0'}
     hasBin: true
     peerDependencies:
@@ -4808,7 +4808,7 @@ snapshots:
       is-wsl: 3.1.1
       powershell-utils: 0.1.0
 
-  wxt@0.20.21(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2):
+  wxt@0.20.22(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.2):
     dependencies:
       '@1natsu/wait-element': 4.2.0
       '@aklinker1/rollup-plugin-visualizer': 5.12.0
