@@ -1,8 +1,8 @@
 {
-  "name": "refined-github",
+  "name": "click-all-for-github",
   "version": "0.1.0",
   "private": true,
-  "description": "Simplifies the GitHub interface and adds useful features",
+  "description": "Click all matching elements at once with Alt+Click.",
   "type": "module",
   "scripts": {
     "dev": "wxt",
