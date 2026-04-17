@@ -2,7 +2,7 @@
   "name": "prevent-accidental-submit",
   "version": "0.1.0",
   "private": true,
-  "description": "Prevent accidental form submissions by disabling Enter-to-submit and using Ctrl/Cmd+Enter instead.",
+  "description": "Prevent accidental form submissions by disabling Enter-to-submit behavior and using Ctrl/Cmd + Enter for submission.",
   "type": "module",
   "scripts": {
     "dev": "wxt",
