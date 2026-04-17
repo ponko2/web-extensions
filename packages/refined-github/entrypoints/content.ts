@@ -1,21 +1,3 @@
-import type { ContentScriptContext } from "wxt/utils/content-script-context";
-
-import { onInvokeMenuItemFunction, toggleMenuItemVisibility } from "./menu";
-
-const watchDOM = (ctx: ContentScriptContext, target: Node, callback: () => void) => {
-  let timeoutId = 0;
-  const observer = new MutationObserver(() => {
-    window.clearTimeout(timeoutId);
-    timeoutId = window.setTimeout(callback, 200);
-  });
-  observer.observe(target, { childList: true, subtree: true });
-  ctx.onInvalidated(() => {
-    window.clearTimeout(timeoutId);
-    observer.disconnect();
-  });
-  callback();
-};
-
 const selectors = [
   // 解決済のコメントを全て開く
   'details[data-resolved="true"]:not([open])',
@@ -60,7 +42,5 @@ export default defineContentScript({
   matches: ["*://*.github.com/*", "*://github.com/*"],
   main(ctx) {
     ctx.addEventListener(document, "click", handleClick, { capture: true });
-    onMessage("invokeMenuItemFunction", onInvokeMenuItemFunction);
-    watchDOM(ctx, document.body, toggleMenuItemVisibility);
   },
 });
