@@ -1,15 +1,15 @@
 const selectors = [
-  // 解決済のコメントを全て開く
+  // Open all resolved comment threads
   'details[data-resolved="true"]:not([open])',
-  // 解決済のコメントを全て閉じる
+  // Close all resolved comment threads
   'details[data-resolved="true"][open]',
-  // 全てのファイルをレビュー済みに変更
+  // Mark all files as viewed
   'button[class*="MarkAsViewedButton"][aria-pressed="false"]',
   "input.js-reviewed-checkbox:not(:checked)",
-  // 全てのファイルを未レビュー状態に変更
+  // Mark all files as unviewed
   'button[class*="MarkAsViewedButton"][aria-pressed="true"]',
   "input.js-reviewed-checkbox:checked",
-  // 差分を全て読み込む
+  // Load all hidden diffs
   '[class^="HiddenDiffPatch"] button',
   ".js-file .js-diff-load",
 ];
