@@ -10,7 +10,7 @@ catalog:
   "@tsconfig/strictest": 2.0.8
   "@types/node": 24.12.2
   "@wxt-dev/storage": ^1.2.8
-  typescript: 6.0.2
+  typescript: 6.0.3
   vite: npm:@voidzero-dev/vite-plus-core@latest
   vite-plus: 0.1.18
   vitest: npm:@voidzero-dev/vite-plus-test@latest
