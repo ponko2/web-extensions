@@ -15,12 +15,8 @@ const selectors = [
 ];
 
 const handleClick = (event: MouseEvent) => {
-  if (!event.isTrusted || !event.altKey) {
-    return;
-  }
-
   const { target } = event;
-  if (!(target instanceof HTMLElement)) {
+  if (!event.isTrusted || !event.altKey || !(target instanceof HTMLElement)) {
     return;
   }
 
