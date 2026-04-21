@@ -31,6 +31,7 @@ export default defineConfig({
       "import/no-named-export": "off",
       "import/prefer-default-export": "off",
       "promise/prefer-await-to-callbacks": "off",
+      "typescript/prefer-readonly-parameter-types": "off",
       "unicorn/prefer-global-this": "off",
     },
   },
