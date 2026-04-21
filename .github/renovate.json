@@ -1,4 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>ponko2/renovate-config"]
+  "extends": ["github>ponko2/renovate-config"],
+  "packageRules": [
+    {
+      "groupName": "vite-plus packages",
+      "matchSourceUrls": ["https://github.com/voidzero-dev/vite-plus"]
+    }
+  ]
 }
