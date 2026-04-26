@@ -35,6 +35,9 @@ export default defineConfig({
       "unicorn/prefer-global-this": "off",
     },
   },
+  run: {
+    cache: true,
+  },
   staged: {
     "*": ["editorconfig-checker", "vp check --fix"],
     "*.nix": ["deadnix --edit", (files) => files.map((file) => `statix fix -- ${file}`), "nixfmt"],
