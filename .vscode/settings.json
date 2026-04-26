@@ -18,6 +18,7 @@
       }
     }
   },
+  "npm.scriptRunner": "vp",
   "oxc.fmt.configPath": "./vite.config.ts",
   "[nix]": {
     "editor.defaultFormatter": "jnoortheen.nix-ide"
