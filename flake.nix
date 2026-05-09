@@ -46,7 +46,7 @@
             ];
             shellHook = ''
               pnpm install
-              export PATH="$HOME/.vite-plus/bin:$PWD/node_modules/.bin:$PATH"
+              export PATH="$HOME/.vite-plus/bin:$PWD/node_modules/.bin:$PWD/node_modules/.pnpm/node_modules/.bin:$PATH"
             '';
           };
           formatter = pkgs.nixfmt-tree;
