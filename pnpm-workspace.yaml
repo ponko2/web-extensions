@@ -14,7 +14,7 @@ catalog:
   vite: npm:@voidzero-dev/vite-plus-core@0.1.19
   vite-plus: 0.1.19
   vitest: npm:@voidzero-dev/vite-plus-test@0.1.19
-  wxt: 0.20.25
+  wxt: 0.20.26
 catalogMode: prefer
 overrides:
   vite: "catalog:"
