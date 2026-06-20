@@ -39,7 +39,7 @@
               deadnix
               editorconfig-checker
               nixd
-              nixfmt-rfc-style
+              nixfmt
               pnpm
               statix
               yamllint
