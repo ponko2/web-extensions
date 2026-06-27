@@ -28,8 +28,8 @@ catalogs:
       specifier: 0.1.24
       version: 0.1.24
     wxt:
-      specifier: 0.20.26
-      version: 0.20.26
+      specifier: 0.20.27
+      version: 0.20.27
 
 overrides:
   vite: npm:@voidzero-dev/vite-plus-core@0.1.24
@@ -75,7 +75,7 @@ importers:
         version: 6.0.3
       wxt:
         specifier: 'catalog:'
-        version: 0.20.26(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
+        version: 0.20.27(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
 
   packages/and-udm-14:
     dependencies:
@@ -91,7 +91,7 @@ importers:
         version: 6.0.3
       wxt:
         specifier: 'catalog:'
-        version: 0.20.26(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
+        version: 0.20.27(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
 
   packages/click-all-for-github:
     devDependencies:
@@ -103,7 +103,7 @@ importers:
         version: 6.0.3
       wxt:
         specifier: 'catalog:'
-        version: 0.20.26(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
+        version: 0.20.27(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
 
   packages/prevent-accidental-submit:
     devDependencies:
@@ -115,7 +115,7 @@ importers:
         version: 6.0.3
       wxt:
         specifier: 'catalog:'
-        version: 0.20.26(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
+        version: 0.20.27(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3)
 
 packages:
 
@@ -1038,6 +1038,9 @@ packages:
   '@wxt-dev/browser@0.1.43':
     resolution: {integrity: sha512-RMB0zgfe7uuiTp18s9taLeKXoOCLBV418797dnEggiMWmM1JDJekiLtlvrNc6QeZg+amDBy2/KKYuQB2kh/K9A==}
 
+  '@wxt-dev/browser@0.2.0':
+    resolution: {integrity: sha512-gURcpkDUknl6FGe8LTsFqv4ZWfi/EacAalJ18qmtVzOnicCZRKkIGK2SApO7JxG4Ig589UexM/CADbKJ66h8aw==}
+
   '@wxt-dev/storage@1.2.8':
     resolution: {integrity: sha512-GWCFKgF5+d7eslOxUDFC70ypA9njupmJb1nQM8uZoX0J3sWT2BO5xJLzb1sYahWAfID9p2BMtnUBN1lkWxPsbQ==}
 
@@ -1507,6 +1510,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   glob-to-regexp@0.4.1:
@@ -2610,8 +2614,8 @@ packages:
     resolution: {integrity: sha512-g/eziiSUNBSsdDJtCLB8bdYEUMj4jR7AGeUo96p/3dTafgjHhpF4RiCFPiRILwjQoDXx5MqkBr4fwWtR3Ky4Wg==}
     engines: {node: '>=20'}
 
-  wxt@0.20.26:
-    resolution: {integrity: sha512-PMGz7sAlONJgwBkOriInXOoEU6/jlGKrhSFvZfiBPHZocyYPfnw1lod9rGDra957H83WO+TnGjYwJiGYciSIqA==}
+  wxt@0.20.27:
+    resolution: {integrity: sha512-dm6yixz2awM4YMqpTJnsCa8aOPiTrjiIjbWslgR5hCjgwhuft+hLlla339Dt7gIKwQloee4oOruoK++vaX0APA==}
     engines: {bun: '>=1.2.0', node: '>=20.12.0'}
     hasBin: true
     peerDependencies:
@@ -3277,6 +3281,11 @@ snapshots:
   '@webext-core/match-patterns@1.0.3': {}
 
   '@wxt-dev/browser@0.1.43':
+    dependencies:
+      '@types/filesystem': 0.0.36
+      '@types/har-format': 1.2.16
+
+  '@wxt-dev/browser@0.2.0':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
@@ -4735,14 +4744,14 @@ snapshots:
       is-wsl: 3.1.1
       powershell-utils: 0.1.0
 
-  wxt@0.20.26(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3):
+  wxt@0.20.27(@types/node@26.0.0)(jiti@2.7.0)(rolldown@1.0.3)(typescript@6.0.3):
     dependencies:
       '@1natsu/wait-element': 4.2.0
       '@aklinker1/rollup-plugin-visualizer': 5.12.0
       '@webext-core/fake-browser': 1.5.2
       '@webext-core/isolated-element': 1.1.5
       '@webext-core/match-patterns': 1.0.3
-      '@wxt-dev/browser': 0.1.43
+      '@wxt-dev/browser': 0.2.0
       '@wxt-dev/storage': 1.2.8
       async-mutex: 0.5.0
       c12: 3.3.4(magicast@0.5.3)
