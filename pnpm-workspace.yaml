@@ -4,9 +4,9 @@ allowBuilds:
   esbuild: true
   spawn-sync: true
 catalog:
-  "@commitlint/cli": 21.1.0
-  "@commitlint/config-conventional": 21.1.0
-  "@commitlint/types": 21.1.0
+  "@commitlint/cli": 21.2.0
+  "@commitlint/config-conventional": 21.2.0
+  "@commitlint/types": 21.2.0
   "@tsconfig/strictest": 2.0.8
   "@types/node": 24.13.2
   "@wxt-dev/storage": ^1.2.8
