@@ -8,7 +8,7 @@ catalog:
   "@commitlint/config-conventional": 21.2.0
   "@commitlint/types": 21.2.0
   "@tsconfig/strictest": 2.0.8
-  "@types/node": 24.13.2
+  "@types/node": 24.13.3
   "@wxt-dev/storage": ^1.2.8
   typescript: 6.0.3
   vite: npm:@voidzero-dev/vite-plus-core@0.2.3
