@@ -12,6 +12,7 @@
     "@commitlint/types": "catalog:",
     "@tsconfig/strictest": "catalog:",
     "typescript": "catalog:",
+    "vite": "catalog:",
     "vite-plus": "catalog:"
   },
   "devEngines": {
