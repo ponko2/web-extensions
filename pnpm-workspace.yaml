@@ -13,7 +13,7 @@ catalog:
   typescript: 7.0.2
   vite: npm:@voidzero-dev/vite-plus-core@0.2.9
   vite-plus: 0.2.9
-  wxt: 0.21.3
+  wxt: 0.21.4
 catalogMode: prefer
 overrides:
   vite: "catalog:"
