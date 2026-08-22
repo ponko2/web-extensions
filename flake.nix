@@ -29,6 +29,10 @@
               type = "app";
               program = "${pkgs.deadnix}/bin/deadnix";
             };
+            editorconfig-checker = {
+              type = "app";
+              program = "${pkgs.editorconfig-checker}/bin/editorconfig-checker";
+            };
             statix = {
               type = "app";
               program = "${pkgs.statix}/bin/statix";
