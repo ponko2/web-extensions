@@ -24,6 +24,7 @@ export default defineConfig({
       "eslint/no-duplicate-imports": ["warn", { allowSeparateTypeImports: true }],
       "eslint/no-magic-numbers": "off",
       "eslint/no-ternary": "off",
+      "eslint/one-var": "off",
       "eslint/sort-imports": "off",
       "eslint/sort-keys": "off",
       "import/exports-last": "off",
