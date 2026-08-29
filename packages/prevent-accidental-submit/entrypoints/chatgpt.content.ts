@@ -1,3 +1,5 @@
+import { SCRIPT_STARTED_EVENT_TYPE } from "~/events";
+
 // Form入力中にEnterで意図せずSubmitしてしまう問題を回避
 const handleKeyDown = (event: KeyboardEvent) => {
   // oxlint-disable-next-line typescript/no-deprecated
@@ -26,9 +28,32 @@ const handleKeyDown = (event: KeyboardEvent) => {
 };
 
 export default defineContentScript({
-  runAt: "document_end",
+  runAt: "document_idle",
   matches: ["*://chatgpt.com/*"],
-  main(ctx) {
-    ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
+  world: "MAIN",
+  main() {
+    const eventId = crypto.randomUUID();
+    const controller = new AbortController();
+
+    document.dispatchEvent(
+      new CustomEvent(SCRIPT_STARTED_EVENT_TYPE, {
+        detail: { eventId },
+      }),
+    );
+
+    document.addEventListener(
+      SCRIPT_STARTED_EVENT_TYPE,
+      (event) => {
+        if (event.detail.eventId !== eventId) {
+          controller.abort();
+        }
+      },
+      { signal: controller.signal },
+    );
+
+    document.addEventListener("keydown", handleKeyDown, {
+      capture: true,
+      signal: controller.signal,
+    });
   },
 });
