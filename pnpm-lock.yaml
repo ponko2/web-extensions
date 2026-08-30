@@ -40,7 +40,7 @@ importers:
     devDependencies:
       '@commitlint/cli':
         specifier: 'catalog:'
-        version: 21.2.2(@types/node@26.2.0)(conventional-commits-parser@7.1.2)(typescript@7.0.2)
+        version: 21.2.2(@types/node@26.4.0)(conventional-commits-parser@7.1.2)(typescript@7.0.2)
       '@commitlint/config-conventional':
         specifier: 'catalog:'
         version: 21.2.2
@@ -52,16 +52,16 @@ importers:
         version: 2.0.8
       node:
         specifier: runtime:^24.19.0
-        version: runtime:24.19.0
+        version: runtime:24.20.0
       typescript:
         specifier: 'catalog:'
         version: 7.0.2
       vite:
         specifier: npm:@voidzero-dev/vite-plus-core@0.3.0
-        version: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)'
+        version: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)'
       vite-plus:
         specifier: 'catalog:'
-        version: 0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)
+        version: 0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)
 
   packages/and-emi-an1vrqenfrjn5:
     dependencies:
@@ -77,7 +77,7 @@ importers:
         version: 7.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
+        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
 
   packages/and-udm-14:
     dependencies:
@@ -93,7 +93,7 @@ importers:
         version: 7.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
+        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
 
   packages/click-all-for-github:
     devDependencies:
@@ -105,7 +105,7 @@ importers:
         version: 7.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
+        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
 
   packages/prevent-accidental-submit:
     devDependencies:
@@ -117,7 +117,7 @@ importers:
         version: 7.0.2
       wxt:
         specifier: 'catalog:'
-        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
+        version: 0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
 
 packages:
 
@@ -260,8 +260,8 @@ packages:
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
     engines: {node: '>=6.0.0'}
 
-  '@jridgewell/sourcemap-codec@1.5.5':
-    resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+  '@jridgewell/sourcemap-codec@1.6.0':
+    resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
@@ -603,8 +603,8 @@ packages:
   '@types/har-format@1.2.16':
     resolution: {integrity: sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A==}
 
-  '@types/node@26.2.0':
-    resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
+  '@types/node@26.4.0':
+    resolution: {integrity: sha512-faiGnoIrLH/V8cibOMEAZ8pMw6oXqSukl29ra4mN8GdaB2ZewzeaLj+INpV5N+Z1eKWzY+IzaIZH2EIR6YZRNQ==}
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     resolution: {integrity: sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==}
@@ -1242,8 +1242,8 @@ packages:
   es-module-lexer@2.3.2:
     resolution: {integrity: sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==}
 
-  es-toolkit@1.51.0:
-    resolution: {integrity: sha512-zC2lQGkM7QX+Gm6iM3+WIdZJzthsEd14LvRNJneSO2hzyz/zNBENR8+YXWo1cKxgPBtV6ksPYHELbcwBRzmdCw==}
+  es-toolkit@1.52.0:
+    resolution: {integrity: sha512-XTNEJQh1tY1ZJVcf6ayP/2n4ZPyaHlW2FWs7xvw5ddPuhUVjLD3olQVQS7kf58JbAB48iL0uL/jerTrjtV3lDA==}
 
   escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
@@ -1266,8 +1266,8 @@ packages:
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
-  fast-uri@3.1.5:
-    resolution: {integrity: sha512-gHwA1O9LDIcKunMKhObS/HimwtehO1nPUECKAu5TpKgaO19fcWEl4bliWe1jWxVFvIXztJjjQ4L8XQ1EU9f7Jw==}
+  fast-uri@3.1.6:
+    resolution: {integrity: sha512-7Ical1vFEMr0onbVzEDIreM22I4khW+fzyQPwvAFWBp1iwdshSZRsL4jjRvPG9JP1uiqMHRto+YU6R2/CzDz5Q==}
 
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
@@ -1357,8 +1357,8 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@4.3.1:
-    resolution: {integrity: sha512-CY6crGq313MX8GkwvB7tzgp99vjQxY1++5y10/BKN/GUfHqWaOGQMNZkBvqSzsZKWk/ijwHlWzzkLulsGHhjWQ==}
+  js-yaml@4.3.2:
+    resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
 
   json-parse-even-better-errors@2.3.1:
@@ -1472,8 +1472,8 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
-  magic-string@1.2.2:
-    resolution: {integrity: sha512-veT/+7iXrXzT39XnEN4lOxtNl72dMgJ8Lp+5Bd6YcMSWpb0n0MjBM8Uuooi6jgJr8dhUW2swQgBmoZVMni5SVg==}
+  magic-string@1.2.3:
+    resolution: {integrity: sha512-Bpb0W2TbLKOZ7vJnOUnVRGq3WL2p+ISV29M6hYPL1AFCpyKZpdr5ytiXoTSSxRVhg8YW7f65+6gbG8WG6PCa/g==}
 
   magicast@0.5.4:
     resolution: {integrity: sha512-llBEhWm1SacoRwgHUoQJYtwp4PBLF4faQi5TCpIGyGs9n4y5+juI0tDgyKIfpqxckRHaHzouUEph3THklWh03w==}
@@ -1494,7 +1494,7 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  node@runtime:24.19.0:
+  node@runtime:24.20.0:
     resolution:
       type: variations
       variants:
@@ -1502,9 +1502,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-9ONcExZd5ogMqiVYwKpIyoitpH/iI0vtB9Ztu4CkfI0=
+            integrity: sha256-FLW9etQKtfRxX7Ti+WSFjYINlCX+KR09ZfmJJua4nB4=
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-aix-ppc64.tar.gz
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-aix-ppc64.tar.gz
           targets:
             - cpu: ppc64
               os: aix
@@ -1512,9 +1512,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-gpS3qpsDmXSBwGur8eiycMhZNY8n2lehFQmv5TesOB0=
+            integrity: sha256-QOVgfl7LPbkZJyN3baLXXZZiYPx0p6nnMcG9Z92pa8g=
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-darwin-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-darwin-arm64.tar.gz
           targets:
             - cpu: arm64
               os: darwin
@@ -1522,9 +1522,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-0bXpmdsVjGL+j3JnpEdrA12L2TsaYFusJKPw3RZuMxY=
+            integrity: sha256-nlsmRM8Qe++2rvymdrltMpa8EBOAlvAi7TeNYjPtgfQ=
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-darwin-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-darwin-x64.tar.gz
           targets:
             - cpu: x64
               os: darwin
@@ -1532,9 +1532,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-0oyKW/CoCPDtQ0odzoxUrpjwNxwL2GrFirxhP3PmZD8=
+            integrity: sha256-NRVgPiSHh5o5vHVxbxoq/9AnUAxkulDoRc9yyzMhkBM=
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-linux-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-arm64.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -1542,9 +1542,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-sxqMTLxYn5FS8y/bQxhGl1nhZViltdk7f/L7KHsBPbI=
+            integrity: sha256-pzSzbI0dFs5FXA65wymwfdEhwshVQ1UGSphhvJbDrcw=
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-linux-ppc64le.tar.gz
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-ppc64le.tar.gz
           targets:
             - cpu: ppc64le
               os: linux
@@ -1552,9 +1552,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-s6tqQ5KCjbn9TtloOY1VGIKSvMFYGVQtU74LEQDjMvw=
+            integrity: sha256-2MIktG7wHweKUj2bfbeSgjBvrigemGoVotv/6UfFMB4=
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-linux-s390x.tar.gz
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-s390x.tar.gz
           targets:
             - cpu: s390x
               os: linux
@@ -1562,9 +1562,20 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-9iXZfNcH30/5YlSRb7xf8BTwnAnv/loeDKj21BqHidQ=
+            integrity: sha256-1ubRu7mtSssW1YC4m+ipyafkkJJuk708MKINRuFSv4o=
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-linux-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-x64-musl.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+              libc: musl
+        - resolution:
+            archive: tarball
+            bin:
+              node: bin/node
+            integrity: sha256-hV1YH4pOsagRfjQm3iX+AncFkv68+zE2mu4f+/7p6Ow=
+            type: binary
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-x64.tar.gz
           targets:
             - cpu: x64
               os: linux
@@ -1572,10 +1583,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-hQL0pQtFjUzDjtjyABVWws0jnUZJIPdAF5Jsyx4cFX8=
-            prefix: node-v24.19.0-win-arm64
+            integrity: sha256-McZ5l0TeilRgFkMJgEDGjDaX5WyU5AfWHQ5fpfNBkdc=
+            prefix: node-v24.20.0-win-arm64
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-win-arm64.zip
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-win-arm64.zip
           targets:
             - cpu: arm64
               os: win32
@@ -1583,10 +1594,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-V/cas2UueX2ErN3HnIHMn/HG3bKhl0zbg/AP7pv/THM=
-            prefix: node-v24.19.0-win-x64
+            integrity: sha256-bKyf+8qPakcJHktcdy4GBgScOHHLZ9kAwM7d5jDlRbo=
+            prefix: node-v24.20.0-win-x64
             type: binary
-            url: https://nodejs.org/download/release/v24.19.0/node-v24.19.0-win-x64.zip
+            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-win-x64.zip
           targets:
             - cpu: x64
               os: win32
@@ -1594,9 +1605,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-IIJOTTWUj65bM33M70eBOwTYmVMS9Z33OG8iVtn5q34=
+            integrity: sha256-LIxQfMsPIIEtlSa6jKRUsWUqre9o/IutBvB/sRIt0e8=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v24.19.0/node-v24.19.0-linux-arm64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-arm64-musl.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -1605,14 +1616,14 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-xgIjeG3xSl0j4iDruOYDGPUyJkCmL5Dm2eVNOhjaUy4=
+            integrity: sha256-muE5n+9L2JkOFXc84TJ7M2oguel9jHVJ9PQspzxD9WI=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v24.19.0/node-v24.19.0-linux-x64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-x64-musl.tar.gz
           targets:
             - cpu: x64
               os: linux
               libc: musl
-    version: 24.19.0
+    version: 24.20.0
     hasBin: true
 
   nth-check@3.0.1:
@@ -1686,8 +1697,8 @@ packages:
     resolution: {integrity: sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA==}
     engines: {node: '>=8.6'}
 
-  picomatch@4.0.5:
-    resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
+  picomatch@4.0.7:
+    resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
 
   pkg-types@1.3.1:
@@ -2054,12 +2065,12 @@ snapshots:
 
   '@blazediff/core@1.9.1': {}
 
-  '@commitlint/cli@21.2.2(@types/node@26.2.0)(conventional-commits-parser@7.1.2)(typescript@7.0.2)':
+  '@commitlint/cli@21.2.2(@types/node@26.4.0)(conventional-commits-parser@7.1.2)(typescript@7.0.2)':
     dependencies:
       '@commitlint/config-conventional': 21.2.2
       '@commitlint/format': 21.2.2
       '@commitlint/lint': 21.2.2
-      '@commitlint/load': 21.2.2(@types/node@26.2.0)(typescript@7.0.2)
+      '@commitlint/load': 21.2.2(@types/node@26.4.0)(typescript@7.0.2)
       '@commitlint/read': 21.2.1(conventional-commits-parser@7.1.2)
       '@commitlint/types': 21.2.0
       tinyexec: 1.3.0
@@ -2083,7 +2094,7 @@ snapshots:
   '@commitlint/ensure@21.2.0':
     dependencies:
       '@commitlint/types': 21.2.0
-      es-toolkit: 1.51.0
+      es-toolkit: 1.52.0
 
   '@commitlint/execute-rule@21.0.1': {}
 
@@ -2104,15 +2115,15 @@ snapshots:
       '@commitlint/rules': 21.2.2
       '@commitlint/types': 21.2.0
 
-  '@commitlint/load@21.2.2(@types/node@26.2.0)(typescript@7.0.2)':
+  '@commitlint/load@21.2.2(@types/node@26.4.0)(typescript@7.0.2)':
     dependencies:
       '@commitlint/config-validator': 21.2.0
       '@commitlint/execute-rule': 21.0.1
       '@commitlint/resolve-extends': 21.2.2
       '@commitlint/types': 21.2.0
       cosmiconfig: 9.0.2(typescript@7.0.2)
-      cosmiconfig-typescript-loader: 6.3.0(@types/node@26.2.0)(cosmiconfig@9.0.2(typescript@7.0.2))(typescript@7.0.2)
-      es-toolkit: 1.51.0
+      cosmiconfig-typescript-loader: 6.3.0(@types/node@26.4.0)(cosmiconfig@9.0.2(typescript@7.0.2))(typescript@7.0.2)
+      es-toolkit: 1.52.0
       is-plain-obj: 4.1.0
       picocolors: 1.1.1
     transitivePeerDependencies:
@@ -2141,7 +2152,7 @@ snapshots:
     dependencies:
       '@commitlint/config-validator': 21.2.0
       '@commitlint/types': 21.2.0
-      es-toolkit: 1.51.0
+      es-toolkit: 1.52.0
       global-directory: 5.0.0
       resolve-from: 5.0.0
 
@@ -2175,7 +2186,7 @@ snapshots:
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
       '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/remapping@2.3.5':
@@ -2185,12 +2196,12 @@ snapshots:
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
-  '@jridgewell/sourcemap-codec@1.5.5': {}
+  '@jridgewell/sourcemap-codec@1.6.0': {}
 
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
 
   '@oxc-project/runtime@0.146.0': {}
 
@@ -2378,7 +2389,7 @@ snapshots:
 
   '@types/har-format@1.2.16': {}
 
-  '@types/node@26.2.0':
+  '@types/node@26.4.0':
     dependencies:
       undici-types: 8.3.0
 
@@ -2442,28 +2453,28 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@vitest/browser-preview@4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)':
+  '@vitest/browser-preview@4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)':
     dependencies:
       '@testing-library/dom': 10.4.1
       '@testing-library/user-event': 14.6.6(@testing-library/dom@10.4.1)
-      '@vitest/browser': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
-      vitest: 4.1.11(@types/node@26.2.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
+      '@vitest/browser': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
+      vitest: 4.1.11(@types/node@26.4.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
     transitivePeerDependencies:
       - bufferutil
       - msw
       - utf-8-validate
       - vite
 
-  '@vitest/browser@4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)':
+  '@vitest/browser@4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)':
     dependencies:
       '@blazediff/core': 1.9.1
-      '@vitest/mocker': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
+      '@vitest/mocker': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
       '@vitest/utils': 4.1.11
       magic-string: 0.30.21
       pngjs: 7.0.0
       sirv: 3.0.2
       tinyrainbow: 3.1.1
-      vitest: 4.1.11(@types/node@26.2.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
+      vitest: 4.1.11(@types/node@26.4.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
       ws: 8.21.3
     transitivePeerDependencies:
       - bufferutil
@@ -2480,13 +2491,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.1
 
-  '@vitest/mocker@4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))':
+  '@vitest/mocker@4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))':
     dependencies:
       '@vitest/spy': 4.1.11
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)'
+      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)'
 
   '@vitest/pretty-format@4.1.11':
     dependencies:
@@ -2512,7 +2523,7 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.1
 
-  '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)':
+  '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)':
     dependencies:
       '@oxc-project/runtime': 0.146.0
       '@oxc-project/types': 0.146.0
@@ -2521,7 +2532,7 @@ snapshots:
       yuku-codegen: 0.5.48
       yuku-parser: 0.5.48
     optionalDependencies:
-      '@types/node': 26.2.0
+      '@types/node': 26.4.0
       '@voidzero-dev/vite-plus-darwin-arm64': 0.3.0
       '@voidzero-dev/vite-plus-darwin-x64': 0.3.0
       '@voidzero-dev/vite-plus-linux-arm64-gnu': 0.3.0
@@ -2652,7 +2663,7 @@ snapshots:
   ajv@8.20.0:
     dependencies:
       fast-deep-equal: 3.1.3
-      fast-uri: 3.1.5
+      fast-uri: 3.1.6
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
@@ -2748,9 +2759,9 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cosmiconfig-typescript-loader@6.3.0(@types/node@26.2.0)(cosmiconfig@9.0.2(typescript@7.0.2))(typescript@7.0.2):
+  cosmiconfig-typescript-loader@6.3.0(@types/node@26.4.0)(cosmiconfig@9.0.2(typescript@7.0.2))(typescript@7.0.2):
     dependencies:
-      '@types/node': 26.2.0
+      '@types/node': 26.4.0
       cosmiconfig: 9.0.2(typescript@7.0.2)
       jiti: 2.6.1
       typescript: 7.0.2
@@ -2759,7 +2770,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.3.1
+      js-yaml: 4.3.2
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 7.0.2
@@ -2848,7 +2859,7 @@ snapshots:
 
   es-module-lexer@2.3.2: {}
 
-  es-toolkit@1.51.0: {}
+  es-toolkit@1.52.0: {}
 
   escalade@3.2.0: {}
 
@@ -2864,11 +2875,11 @@ snapshots:
 
   fast-deep-equal@3.1.3: {}
 
-  fast-uri@3.1.5: {}
+  fast-uri@3.1.6: {}
 
-  fdir@6.5.0(picomatch@4.0.5):
+  fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
-      picomatch: 4.0.5
+      picomatch: 4.0.7
 
   filesize@11.0.22: {}
 
@@ -2925,7 +2936,7 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@4.3.1:
+  js-yaml@4.3.2:
     dependencies:
       argparse: 2.0.1
 
@@ -3006,11 +3017,11 @@ snapshots:
 
   magic-string@0.30.21:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
 
-  magic-string@1.2.2:
+  magic-string@1.2.3:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
 
   magicast@0.5.4:
     dependencies:
@@ -3031,7 +3042,7 @@ snapshots:
 
   nanoid@3.3.18: {}
 
-  node@runtime:24.19.0: {}
+  node@runtime:24.20.0: {}
 
   nth-check@3.0.1:
     dependencies:
@@ -3053,7 +3064,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  oxfmt@0.64.0(vite-plus@0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)):
+  oxfmt@0.64.0(vite-plus@0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)):
     dependencies:
       tinypool: 2.1.0
     optionalDependencies:
@@ -3076,7 +3087,7 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.64.0
       '@oxfmt/binding-win32-ia32-msvc': 0.64.0
       '@oxfmt/binding-win32-x64-msvc': 0.64.0
-      vite-plus: 0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)
+      vite-plus: 0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)
 
   oxlint-tsgolint@7.0.2001:
     optionalDependencies:
@@ -3087,7 +3098,7 @@ snapshots:
       '@oxlint-tsgolint/win32-arm64': 7.0.2001
       '@oxlint-tsgolint/win32-x64': 7.0.2001
 
-  oxlint@1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)):
+  oxlint@1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)):
     optionalDependencies:
       '@oxlint/binding-android-arm-eabi': 1.79.0
       '@oxlint/binding-android-arm64': 1.79.0
@@ -3109,7 +3120,7 @@ snapshots:
       '@oxlint/binding-win32-ia32-msvc': 1.79.0
       '@oxlint/binding-win32-x64-msvc': 1.79.0
       oxlint-tsgolint: 7.0.2001
-      vite-plus: 0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)
+      vite-plus: 0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2)
 
   parent-module@1.0.1:
     dependencies:
@@ -3130,7 +3141,7 @@ snapshots:
 
   picomatch@2.3.2: {}
 
-  picomatch@4.0.5: {}
+  picomatch@4.0.7: {}
 
   pkg-types@1.3.1:
     dependencies:
@@ -3244,8 +3255,8 @@ snapshots:
 
   tinyglobby@0.2.17:
     dependencies:
-      fdir: 6.5.0(picomatch@4.0.5)
-      picomatch: 4.0.5
+      fdir: 6.5.0(picomatch@4.0.7)
+      picomatch: 4.0.7
 
   tinypool@2.1.0: {}
 
@@ -3282,21 +3293,21 @@ snapshots:
 
   undici-types@8.3.0: {}
 
-  unimport@6.4.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)):
+  unimport@6.4.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)):
     dependencies:
       acorn: 8.18.0
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
       local-pkg: 1.2.1
-      magic-string: 1.2.2
+      magic-string: 1.2.3
       mlly: 1.8.2
       pathe: 2.0.3
-      picomatch: 4.0.5
+      picomatch: 4.0.7
       pkg-types: 2.3.1
       scule: 1.3.0
       strip-literal: 4.0.0
       tinyglobby: 0.2.17
-      unplugin: 3.3.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
+      unplugin: 3.3.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
       unplugin-utils: 0.3.2
     transitivePeerDependencies:
       - '@farmfe/core'
@@ -3311,34 +3322,34 @@ snapshots:
   unplugin-utils@0.3.2:
     dependencies:
       pathe: 2.0.3
-      picomatch: 4.0.5
+      picomatch: 4.0.7
 
-  unplugin@3.3.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)):
+  unplugin@3.3.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)):
     dependencies:
       '@jridgewell/remapping': 2.3.5
-      picomatch: 4.0.5
+      picomatch: 4.0.7
       webpack-virtual-modules: 0.6.2
     optionalDependencies:
-      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)'
+      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)'
 
-  vite-plus@0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2):
+  vite-plus@0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2):
     dependencies:
       '@oxc-project/types': 0.146.0
       '@oxlint/plugins': 1.79.0
-      '@vitest/browser': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
-      '@vitest/browser-preview': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
+      '@vitest/browser': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
+      '@vitest/browser-preview': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
       '@vitest/expect': 4.1.11
-      '@vitest/mocker': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
+      '@vitest/mocker': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
       '@vitest/pretty-format': 4.1.11
       '@vitest/runner': 4.1.11
       '@vitest/snapshot': 4.1.11
       '@vitest/spy': 4.1.11
       '@vitest/utils': 4.1.11
-      '@voidzero-dev/vite-plus-core': 0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)
-      oxfmt: 0.64.0(vite-plus@0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2))
-      oxlint: 1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@26.2.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2))
+      '@voidzero-dev/vite-plus-core': 0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)
+      oxfmt: 0.64.0(vite-plus@0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2))
+      oxlint: 1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@26.4.0)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(jiti@2.7.0)(typescript@7.0.2))
       oxlint-tsgolint: 7.0.2001
-      vitest: 4.1.11(@types/node@26.2.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
+      vitest: 4.1.11(@types/node@26.4.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
     optionalDependencies:
       '@voidzero-dev/vite-plus-darwin-arm64': 0.3.0
       '@voidzero-dev/vite-plus-darwin-x64': 0.3.0
@@ -3379,10 +3390,10 @@ snapshots:
       - vite
       - yaml
 
-  vitest@4.1.11(@types/node@26.2.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)):
+  vitest@4.1.11(@types/node@26.4.0)(@vitest/browser-preview@4.1.11)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)):
     dependencies:
       '@vitest/expect': 4.1.11
-      '@vitest/mocker': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
+      '@vitest/mocker': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
       '@vitest/pretty-format': 4.1.11
       '@vitest/runner': 4.1.11
       '@vitest/snapshot': 4.1.11
@@ -3393,17 +3404,17 @@ snapshots:
       magic-string: 0.30.21
       obug: 2.1.4
       pathe: 2.0.3
-      picomatch: 4.0.5
+      picomatch: 4.0.7
       std-env: 4.2.0
       tinybench: 2.9.0
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.1
-      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)'
+      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)'
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 26.2.0
-      '@vitest/browser-preview': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
+      '@types/node': 26.4.0
+      '@vitest/browser-preview': 4.1.11(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(vitest@4.1.11)
     transitivePeerDependencies:
       - msw
 
@@ -3428,7 +3439,7 @@ snapshots:
 
   ws@8.21.3: {}
 
-  wxt@0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2):
+  wxt@0.21.4(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2):
     dependencies:
       '@1natsu/wait-element': 4.2.0
       '@aklinker1/rollup-plugin-visualizer': 5.12.0
@@ -3452,14 +3463,14 @@ snapshots:
       linkedom: 0.18.13
       magicast: 0.5.4
       nypm: 0.6.9
-      picomatch: 4.0.5
+      picomatch: 4.0.7
       publish-browser-extension: 6.1.1
       superlock: 1.3.5
       tiny-open: 1.3.0
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
-      unimport: 6.4.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2))
-      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.2.0)(jiti@2.7.0)(typescript@7.0.2)'
+      unimport: 6.4.0(@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2))
+      vite: '@voidzero-dev/vite-plus-core@0.3.0(@types/node@26.4.0)(jiti@2.7.0)(typescript@7.0.2)'
     optionalDependencies:
       typescript: 7.0.2
     transitivePeerDependencies:
