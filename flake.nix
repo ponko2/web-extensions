@@ -42,7 +42,6 @@
             packages = with pkgs; [
               deadnix
               editorconfig-checker
-              nixd
               nixfmt
               pnpm
               statix
