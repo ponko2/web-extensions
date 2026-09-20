@@ -54,12 +54,6 @@
             '';
           };
           formatter = pkgs.nixfmt-tree;
-          packages = {
-            inherit (pkgs)
-              direnv
-              nix-direnv
-              ;
-          };
         };
     };
 }
