@@ -2,6 +2,7 @@ import { defineConfig } from "vite-plus";
 
 export default defineConfig({
   fmt: {
+    ignorePatterns: [".mise/locks/**"],
     sortImports: {},
   },
   lint: {
@@ -41,7 +42,6 @@ export default defineConfig({
   },
   staged: {
     "*": ["editorconfig-checker", "vp check --fix"],
-    "*.nix": ["deadnix --edit", (files) => files.map((file) => `statix fix -- ${file}`), "nixfmt"],
     "*.{yaml,yml}": "yamllint --list-files --strict",
   },
 });
