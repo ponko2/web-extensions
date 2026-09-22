@@ -15,6 +15,7 @@ editorconfig-checker = "latest"
 ghalint = "latest"
 hk = "latest"
 python = "latest"
+shellcheck = "latest"
 uv = "latest"
 zizmor = "latest"
 
