@@ -1,11 +1,8 @@
-import { RuleConfigSeverity } from "@commitlint/types";
-import type { UserConfig } from "@commitlint/types";
-
 export default {
   extends: ["@commitlint/config-conventional"],
   rules: {
     // ProTip: Great commit summaries are 50 characters or less. Place extra information in the extended description.
-    "header-max-length": [RuleConfigSeverity.Error, "always", 50],
+    "header-max-length": [2, "always", 50],
   },
   ignores: [
     (commit) => /^Signed-off-by: dependabot\[bot\] <support@github\.com>$/mu.test(commit),
@@ -14,4 +11,4 @@ export default {
         commit,
       ),
   ],
-} satisfies UserConfig;
+};

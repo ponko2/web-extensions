@@ -5,7 +5,9 @@ _.path = ["~/.vite-plus/bin", "node_modules/.bin", "node_modules/.pnpm/node_modu
 lockfile = true
 
 [tools]
+"npm:@commitlint/cli" = "latest"
 editorconfig-checker = "latest"
+hk = "latest"
 pnpm = "latest"
 python = "latest"
 uv = "latest"

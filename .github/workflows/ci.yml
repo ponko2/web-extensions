@@ -174,16 +174,13 @@ jobs:
           fetch-depth: 50 # Assume PRs are less than 50 commits
           filter: blob:none
           persist-credentials: false
-      - name: Set up Vite+
-        uses: voidzero-dev/setup-vp@9fd26ff49f9b5e6276c2b493da4454ad4527f7f4 # v1.20.0
-        with:
-          cache: true
-          node-version-file: package.json
+      - name: Set up mise
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
       - name: Validate all commits from PR
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: vp exec commitlint --from "$BASE_SHA" --to "$HEAD_SHA" --verbose
+        run: commitlint --from "$BASE_SHA" --to "$HEAD_SHA" --verbose
   compile:
     name: Compile
     if: ${{ always() && !failure() && !cancelled() &&
