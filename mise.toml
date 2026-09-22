@@ -6,11 +6,14 @@ lockfile = true
 
 [tools]
 "npm:@commitlint/cli" = "latest"
+actionlint = "latest"
 editorconfig-checker = "latest"
+ghalint = "latest"
 hk = "latest"
 pnpm = "latest"
 python = "latest"
 uv = "latest"
+zizmor = "latest"
 
 [tools.yamllint]
 version = "latest"

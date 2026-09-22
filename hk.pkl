@@ -3,9 +3,26 @@ amends "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Config.pk
 import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.pkl"
 
 steps {
+  ["actionlint"] = Builtins.actionlint
   ["editorconfig_checker"] = Builtins.editorconfig_checker
-  ["vp_check"] = Builtins.vp_check
+  ["ghalint_action"] = Builtins.ghalint_action
+  ["ghalint_workflow"] = Builtins.ghalint_workflow
+  ["vp_check"] = (Builtins.vp_check) {
+    check = new CommandSpec {
+      command = new Command {
+        argv = List("vp", "check", "--no-error-on-unmatched-pattern", "{{files}}")
+      }
+      effect = "read"
+    }
+    fix = new CommandSpec {
+      command = new Command {
+        argv = List("vp", "check", "--fix", "--no-error-on-unmatched-pattern", "{{files}}")
+      }
+      effect = "write"
+    }
+  }
   ["yamllint"] = Builtins.yamllint
+  ["zizmor"] = Builtins.zizmor
 }
 
 hooks {
