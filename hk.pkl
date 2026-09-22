@@ -1,0 +1,19 @@
+amends "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Config.pkl"
+
+import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.pkl"
+
+steps {
+  ["editorconfig_checker"] = Builtins.editorconfig_checker
+  ["vp_check"] = Builtins.vp_check
+  ["yamllint"] = Builtins.yamllint
+}
+
+hooks {
+  ["commit-msg"] {
+    steps {
+      ["commitlint"] {
+        check = "commitlint --edit {{commit_msg_file}}"
+      }
+    }
+  }
+}

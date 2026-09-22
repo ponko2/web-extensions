@@ -19,7 +19,7 @@ export default defineConfig({
       typeAware: true,
       typeCheck: true,
     },
-    plugins: ["eslint", "import", "jsdoc", "oxc", "promise", "typescript", "unicorn"],
+    plugins: ["eslint", "import", "jsdoc", "oxc", "promise", "unicorn"],
     rules: {
       "eslint/capitalized-comments": "off",
       "eslint/no-duplicate-imports": ["warn", { allowSeparateTypeImports: true }],
@@ -33,15 +33,25 @@ export default defineConfig({
       "import/no-named-export": "off",
       "import/prefer-default-export": "off",
       "promise/prefer-await-to-callbacks": "off",
-      "typescript/prefer-readonly-parameter-types": "off",
       "unicorn/prefer-global-this": "off",
     },
+    overrides: [
+      {
+        files: ["**/*.cts", "**/*.mts", "**/*.ts", "**/*.tsx"],
+        plugins: ["typescript"],
+        rules: {
+          "typescript/prefer-readonly-parameter-types": "off",
+        },
+      },
+      {
+        files: ["**/*.config.js", "**/*.config.ts"],
+        rules: {
+          "import/no-anonymous-default-export": "off",
+        },
+      },
+    ],
   },
   run: {
     cache: true,
-  },
-  staged: {
-    "*": ["editorconfig-checker", "vp check --fix"],
-    "*.{yaml,yml}": "yamllint --list-files --strict",
   },
 });
