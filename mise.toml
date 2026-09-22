@@ -1,5 +1,9 @@
 [env]
-_.path = ["~/.vite-plus/bin", "node_modules/.bin", "node_modules/.pnpm/node_modules/.bin"]
+_.path = [
+  "{{env.XDG_CONFIG_HOME}}/vite-plus/bin",
+  "node_modules/.bin",
+  "node_modules/.pnpm/node_modules/.bin",
+]
 
 [settings]
 lockfile = true
@@ -10,7 +14,6 @@ actionlint = "latest"
 editorconfig-checker = "latest"
 ghalint = "latest"
 hk = "latest"
-pnpm = "latest"
 python = "latest"
 uv = "latest"
 zizmor = "latest"
