@@ -7,6 +7,7 @@ steps {
   ["editorconfig_checker"] = Builtins.editorconfig_checker
   ["ghalint_action"] = Builtins.ghalint_action
   ["ghalint_workflow"] = Builtins.ghalint_workflow
+  ["ryl"] = Builtins.ryl
   ["vp_check"] = (Builtins.vp_check) {
     check = new CommandSpec {
       command = new Command {
@@ -21,7 +22,6 @@ steps {
       effect = "write"
     }
   }
-  ["yamllint"] = Builtins.yamllint
   ["zizmor"] = Builtins.zizmor
 }
 

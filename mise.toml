@@ -9,16 +9,11 @@ _.path = [
 lockfile = true
 
 [tools]
+"aqua:owenlamont/ryl" = "latest"
 "npm:@commitlint/cli" = "latest"
 actionlint = "latest"
 editorconfig-checker = "latest"
 ghalint = "latest"
 hk = "latest"
-python = "latest"
 shellcheck = "latest"
-uv = "latest"
 zizmor = "latest"
-
-[tools.yamllint]
-version = "latest"
-depends = ["python", "uv"]
