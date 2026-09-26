@@ -58,8 +58,11 @@ jobs:
               - .github/workflows/ci.yml
             dependencies: &dependencies
               - "**/package.json"
+              - mise.lock
+              - mise.toml
               - pnpm-lock.yaml
             actions:
+              - *dependencies
               - "**/action.{yaml,yml}"
               - ".github/workflows/*.{yaml,yml}"
             build:
@@ -72,6 +75,7 @@ jobs:
               - "packages/**/*.{ts,tsx}"
             ryl:
               - *common
+              - *dependencies
               - "**/*.{yaml,yml}"
   actionlint:
     name: actionlint
