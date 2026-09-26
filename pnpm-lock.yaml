@@ -191,7 +191,7 @@ importers:
         specifier: 'catalog:'
         version: 2.0.8
       node:
-        specifier: runtime:^24.19.0
+        specifier: runtime:^24.21.0
         version: runtime:24.21.0
       typescript:
         specifier: 'catalog:'
