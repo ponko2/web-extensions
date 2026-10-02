@@ -8,12 +8,12 @@ catalog:
   "@types/node": 24.19.0
   "@wxt-dev/storage": ^1.2.9
   typescript: 7.0.2
-  vite: npm:@voidzero-dev/vite-plus-core@0.3.3
-  vite-plus: 0.3.3
+  vite: npm:@voidzero-dev/vite-plus-core@1.0.0
+  vite-plus: 1.0.0
   wxt: 0.21.4
 catalogMode: prefer
 overrides:
-  vite: "catalog:"
+  vite@*: "catalog:"
 peerDependencyRules:
   allowAny:
     - vite
