@@ -1,6 +1,6 @@
 [env]
 _.path = [
-  "{{env.XDG_CONFIG_HOME}}/vite-plus/bin",
+  "${XDG_CONFIG_HOME:-$HOME/.config}/vite-plus/bin",
   "node_modules/.bin",
   "node_modules/.pnpm/node_modules/.bin",
 ]
