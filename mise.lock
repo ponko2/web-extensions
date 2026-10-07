@@ -50,44 +50,44 @@ url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/3849249
 provenance = "github-attestations"
 
 [[tools."aqua:owenlamont/ryl"]]
-version = "0.22.0"
+version = "0.23.0"
 backend = "aqua:owenlamont/ryl"
 specifiers = ["latest"]
 
 [tools."aqua:owenlamont/ryl"."platforms.linux-arm64"]
-checksum = "sha256:1045ea5807ae274c0812f63f73469018b58f822c8987e22b71f9995be971a6dd"
-url = "https://github.com/owenlamont/ryl/releases/download/v0.22.0/ryl-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/547221094"
+checksum = "sha256:2358c7e2b82e5caae0a60dbf2a0b9867dcf2f7fd79c6489ec20e8050bdf7a1e7"
+url = "https://github.com/owenlamont/ryl/releases/download/v0.23.0/ryl-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/609164151"
 provenance = "github-attestations"
 
 [tools."aqua:owenlamont/ryl"."platforms.linux-arm64-musl"]
-checksum = "sha256:e2756acb29fac8a1963ef6477f557d31bd9b6a1fb0d745dcb2c5c24714e20910"
-url = "https://github.com/owenlamont/ryl/releases/download/v0.22.0/ryl-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/547221095"
+checksum = "sha256:ce6895727222426632a9cd99504a832fb6f7ca6a90fee7a22e2a801ce3e74b40"
+url = "https://github.com/owenlamont/ryl/releases/download/v0.23.0/ryl-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/609164152"
 provenance = "github-attestations"
 
 [tools."aqua:owenlamont/ryl"."platforms.linux-x64"]
-checksum = "sha256:e51be237168ff44c8e28caca87db35c15ac5c943bba5edba0e72465b51add524"
-url = "https://github.com/owenlamont/ryl/releases/download/v0.22.0/ryl-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/547221116"
+checksum = "sha256:f7cc099eb3b2b18dd75e58dfd3d26cacc8b6ed6d4ca47cdaae79311e17ab4f29"
+url = "https://github.com/owenlamont/ryl/releases/download/v0.23.0/ryl-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/609164176"
 provenance = "github-attestations"
 
 [tools."aqua:owenlamont/ryl"."platforms.linux-x64-musl"]
-checksum = "sha256:43625dd5c968b2c08e875a8121b2c441bd5059414d8d1fbe8d791cf6bfde402c"
-url = "https://github.com/owenlamont/ryl/releases/download/v0.22.0/ryl-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/547221117"
+checksum = "sha256:74641f31c6258428a21dfddcae3caa14d21ad2a46011b6237b277a8fbcdb1ab6"
+url = "https://github.com/owenlamont/ryl/releases/download/v0.23.0/ryl-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/609164180"
 provenance = "github-attestations"
 
 [tools."aqua:owenlamont/ryl"."platforms.macos-arm64"]
-checksum = "sha256:512051556cc92b3bfcb21c434072dcb3de7088af4982439ff0cce7888819f501"
-url = "https://github.com/owenlamont/ryl/releases/download/v0.22.0/ryl-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/547221097"
+checksum = "sha256:2045a5a46147c0cdf98f7333e1575952a5ac3e8cdb46e9b93d90bedcc3eaf0a2"
+url = "https://github.com/owenlamont/ryl/releases/download/v0.23.0/ryl-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/609164155"
 provenance = "github-attestations"
 
 [tools."aqua:owenlamont/ryl"."platforms.windows-x64"]
-checksum = "sha256:c0b3c8520b0d749d5df974e9638110a7169cde1d8febd6a4e68e802c5de7a70d"
-url = "https://github.com/owenlamont/ryl/releases/download/v0.22.0/ryl-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/547221108"
+checksum = "sha256:8be519152d443f0bf8be2c3395c9d31794032324860de7abcd947d9c8deed98e"
+url = "https://github.com/owenlamont/ryl/releases/download/v0.23.0/ryl-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/owenlamont/ryl/releases/assets/609164170"
 provenance = "github-attestations"
 
 [[tools.editorconfig-checker]]
