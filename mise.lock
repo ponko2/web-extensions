@@ -235,7 +235,7 @@ signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
 
 [[tools."npm:@commitlint/cli"]]
 version = "21.2.3"
-aube = { path = ".mise/locks/npm-commitlint-cli/21.2.3", digest = "sha256:7649878a4ad6dc7c20208c324f65d673efc2c7b955f02489f36d70808e668cae" }
+aube = { path = ".mise/locks/npm-commitlint-cli/21.2.3", digest = "sha256:6db68ace37a710e0a38eb6b41c32e8e6aa49d620f5cbb0d9e812ce2180b84b06" }
 backend = "npm:@commitlint/cli"
 specifiers = ["latest"]
 
