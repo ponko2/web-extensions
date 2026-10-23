@@ -1,25 +1,13 @@
-amends "package://github.com/jdx/hk/releases/download/v2.7.1/hk@2.7.1#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.8.1/hk@2.8.1#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v2.7.1/hk@2.7.1#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.8.1/hk@2.8.1#/Builtins.pkl"
 
 steps {
   ["editorconfig_checker"] = Builtins.editorconfig_checker
   ["jactionlint"] = Builtins.jactionlint
+  ["mise"] = Builtins.mise
   ["ryl"] = Builtins.ryl
-  ["vp_check"] = (Builtins.vp_check) {
-    check = new CommandSpec {
-      command = new Command {
-        argv = List("vp", "check", "--no-error-on-unmatched-pattern", "{{files}}")
-      }
-      effect = "read"
-    }
-    fix = new CommandSpec {
-      command = new Command {
-        argv = List("vp", "check", "--fix", "--no-error-on-unmatched-pattern", "{{files}}")
-      }
-      effect = "write"
-    }
-  }
+  ["vp_check"] = Builtins.vp_check
 }
 
 hooks {
