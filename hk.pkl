@@ -5,6 +5,7 @@ import "package://github.com/jdx/hk/releases/download/v2.8.1/hk@2.8.1#/Builtins.
 steps {
   ["editorconfig_checker"] = Builtins.editorconfig_checker
   ["jactionlint"] = Builtins.jactionlint
+  ["mise"] = Builtins.mise
   ["ryl"] = Builtins.ryl
   ["vp_check"] = Builtins.vp_check
 }
