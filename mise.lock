@@ -91,43 +91,43 @@ url_api = "https://api.github.com/repos/editorconfig-checker/editorconfig-checke
 provenance = "github-attestations"
 
 [[tools.hk]]
-version = "2.8.2"
+version = "2.9.0"
 backend = "packslip:github.com/jdx/hk"
 specifiers = ["latest"]
 
 [tools.hk."platforms.linux-arm64"]
-checksum = "sha256:a7e87963e84774b497794d465941f5f60ef43aa42f5ff59c58ccef0b007f7484"
-url = "https://github.com/jdx/hk/releases/download/v2.8.2/hk-aarch64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:1ed0259505fab94bc4f90b42f36e38b61b316c20f2f6f7589d0b090cc42068d3"
+url = "https://github.com/jdx/hk/releases/download/v2.9.0/hk-aarch64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
 repository_ids = { repository = "922514152" }
 
 [tools.hk."platforms.linux-arm64-musl"]
-checksum = "sha256:d8bd6fe27758dd96fb290e8f43903cca02dd8b8db626ffda2ade6fd061202330"
-url = "https://github.com/jdx/hk/releases/download/v2.8.2/hk-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:9f16526f08f9ed2835a3c50e6e5aa2baf32284e7325a799b5c9b250e3ede12f0"
+url = "https://github.com/jdx/hk/releases/download/v2.9.0/hk-aarch64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
 repository_ids = { repository = "922514152" }
 
 [tools.hk."platforms.linux-x64"]
-checksum = "sha256:43b996bc5b2fb051814ea90bcf2f959aafd69c0ec29221e55838a907d4cddc30"
-url = "https://github.com/jdx/hk/releases/download/v2.8.2/hk-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:db1021a8920b71c161e26bef246c5b00a3ea6aa480b6cb837ee098ffeb8c41a1"
+url = "https://github.com/jdx/hk/releases/download/v2.9.0/hk-x86_64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
 repository_ids = { repository = "922514152" }
 
 [tools.hk."platforms.linux-x64-musl"]
-checksum = "sha256:04bdc63922ea7e176a78bf2da156b68eacb0f1c1488ca023bad787178736bf61"
-url = "https://github.com/jdx/hk/releases/download/v2.8.2/hk-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:91136908087b35d1dba1caee108b577774223429546d8b28a9de57280fcc7d36"
+url = "https://github.com/jdx/hk/releases/download/v2.9.0/hk-x86_64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
 repository_ids = { repository = "922514152" }
 
 [tools.hk."platforms.macos-arm64"]
-checksum = "sha256:f3400b721b13cb13e43f7731c150c8f1686f01507592d72b94b05fb0cb65099a"
-url = "https://github.com/jdx/hk/releases/download/v2.8.2/hk-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:c7c4d85fd44e88d54b2bf8f9fc38165e278983f54210c095a3e3e8c593e4b720"
+url = "https://github.com/jdx/hk/releases/download/v2.9.0/hk-aarch64-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
 repository_ids = { repository = "922514152" }
 
 [tools.hk."platforms.windows-x64"]
-checksum = "sha256:d7cc46f6f79475a562d6584ea59511b98f2f21f7a95636e2a443fef9ea77b880"
-url = "https://github.com/jdx/hk/releases/download/v2.8.2/hk-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:f0b6f181eecd9c784901122a3d4be15bb13156a839b36021a173b366756804dd"
+url = "https://github.com/jdx/hk/releases/download/v2.9.0/hk-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
 repository_ids = { repository = "922514152" }
 
