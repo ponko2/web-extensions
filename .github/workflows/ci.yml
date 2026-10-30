@@ -93,7 +93,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up mise
-        uses: jdx/mise-action@v5.2.3
+        uses: jdx/mise-action@v5.2.4
       - name: Run jactionlint
         run: jactionlint --format=github --color
         shell: bash
@@ -153,7 +153,7 @@ jobs:
           filter: blob:none
           persist-credentials: false
       - name: Set up mise
-        uses: jdx/mise-action@v5.2.3
+        uses: jdx/mise-action@v5.2.4
       - name: Validate all commits from PR
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -194,7 +194,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up mise
-        uses: jdx/mise-action@v5.2.3
+        uses: jdx/mise-action@v5.2.4
       - name: Run EditorConfig checker
         run: editorconfig-checker
         shell: bash
@@ -213,7 +213,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up mise
-        uses: jdx/mise-action@v5.2.3
+        uses: jdx/mise-action@v5.2.4
       - name: Run ryl
         run: ryl --format=github --strict .
         shell: bash
