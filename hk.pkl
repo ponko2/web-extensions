@@ -7,6 +7,7 @@ steps {
   ["jactionlint"] = Builtins.jactionlint
   ["mise"] = Builtins.mise
   ["ryl"] = Builtins.ryl
+  ["ryl_format"] = Builtins.ryl_format
   ["vp_check"] = Builtins.vp_check
 }
 
