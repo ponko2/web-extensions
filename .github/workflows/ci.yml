@@ -87,6 +87,8 @@ jobs:
     timeout-minutes: 60
     permissions:
       contents: read
+    env:
+      MISE_ENABLE_TOOLS: jactionlint,shellcheck
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -94,6 +96,8 @@ jobs:
           persist-credentials: false
       - name: Set up mise
         uses: jdx/mise-action@v5.2.6
+        with:
+          cache_key_prefix: mise-v1-${{ github.job }}
       - name: Run jactionlint
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -148,6 +152,8 @@ jobs:
     timeout-minutes: 60
     permissions:
       contents: read
+    env:
+      MISE_ENABLE_TOOLS: npm:@commitlint/cli
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -157,6 +163,8 @@ jobs:
           persist-credentials: false
       - name: Set up mise
         uses: jdx/mise-action@v5.2.6
+        with:
+          cache_key_prefix: mise-v1-${{ github.job }}
       - name: Validate all commits from PR
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -191,6 +199,8 @@ jobs:
     timeout-minutes: 60
     permissions:
       contents: read
+    env:
+      MISE_ENABLE_TOOLS: editorconfig-checker
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -198,6 +208,8 @@ jobs:
           persist-credentials: false
       - name: Set up mise
         uses: jdx/mise-action@v5.2.6
+        with:
+          cache_key_prefix: mise-v1-${{ github.job }}
       - name: Run EditorConfig checker
         run: editorconfig-checker
         shell: bash
@@ -210,6 +222,8 @@ jobs:
     timeout-minutes: 60
     permissions:
       contents: read
+    env:
+      MISE_ENABLE_TOOLS: aqua:owenlamont/ryl
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -217,6 +231,8 @@ jobs:
           persist-credentials: false
       - name: Set up mise
         uses: jdx/mise-action@v5.2.6
+        with:
+          cache_key_prefix: mise-v1-${{ github.job }}
       - name: Run ryl
         run: ryl --format=github --strict .
         shell: bash
