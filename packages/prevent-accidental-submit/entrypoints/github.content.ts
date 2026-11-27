@@ -16,7 +16,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
 
 export default defineContentScript({
   runAt: "document_end",
-  matches: ["*://*.github.com/*", "*://github.com/*"],
+  matches: ["*://*.github.com/*"],
   main(ctx) {
     ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
   },
