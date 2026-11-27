@@ -7,8 +7,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
     event.isTrusted &&
     event.key === "Enter" &&
     !(event.ctrlKey || event.metaKey) &&
-    event.target instanceof HTMLElement &&
-    event.target.tagName === "TEXTAREA"
+    event.target instanceof HTMLTextAreaElement
   ) {
     event.stopPropagation();
   }
