@@ -9,7 +9,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
     !(event.ctrlKey || event.metaKey) &&
     event.target instanceof HTMLElement &&
     event.target.dataset["testid"] === "chat-input" &&
-    event.target.contentEditable === "true"
+    event.target.isContentEditable
   ) {
     event.stopPropagation();
   }
