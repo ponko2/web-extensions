@@ -186,9 +186,6 @@ catalogs:
     '@tsconfig/strictest':
       specifier: 2.0.9
       version: 2.0.9
-    '@wxt-dev/storage':
-      specifier: ^1.4.0
-      version: 1.4.0
     typescript:
       specifier: 7.0.2
       version: 7.0.2
@@ -224,38 +221,6 @@ importers:
       vite-plus:
         specifier: 'catalog:'
         version: 1.8.0(@vitest/ui@5.1.1)(jiti@2.7.0)(typescript@7.0.2)
-
-  packages/and-emi-an1vrqenfrjn5:
-    dependencies:
-      '@wxt-dev/storage':
-        specifier: 'catalog:'
-        version: 1.4.0
-    devDependencies:
-      '@tsconfig/strictest':
-        specifier: 'catalog:'
-        version: 2.0.9
-      typescript:
-        specifier: 'catalog:'
-        version: 7.0.2
-      wxt:
-        specifier: 'catalog:'
-        version: 0.21.5(@voidzero-dev/vite-plus-core@8.3.8001(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
-
-  packages/and-udm-14:
-    dependencies:
-      '@wxt-dev/storage':
-        specifier: 'catalog:'
-        version: 1.4.0
-    devDependencies:
-      '@tsconfig/strictest':
-        specifier: 'catalog:'
-        version: 2.0.9
-      typescript:
-        specifier: 'catalog:'
-        version: 7.0.2
-      wxt:
-        specifier: 'catalog:'
-        version: 0.21.5(@voidzero-dev/vite-plus-core@8.3.8001(jiti@2.7.0)(typescript@7.0.2))(typescript@7.0.2)
 
   packages/click-all-for-github:
     devDependencies:
