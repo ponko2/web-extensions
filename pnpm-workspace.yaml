@@ -8,8 +8,8 @@ catalog:
   "@types/node": 24.19.2
   "@wxt-dev/storage": ^1.4.0
   typescript: 7.0.2
-  vite: npm:@voidzero-dev/vite-plus-core@8.3.8000
-  vite-plus: 1.7.0
+  vite: npm:@voidzero-dev/vite-plus-core@8.3.8001
+  vite-plus: 1.8.0
   wxt: 0.21.5
 catalogMode: prefer
 overrides:
