@@ -5,12 +5,11 @@ const handleKeyDown = (event: KeyboardEvent) => {
   if (
     !isComposing &&
     event.isTrusted &&
-    event.code === "Enter" &&
+    event.key === "Enter" &&
     !(event.ctrlKey || event.metaKey) &&
     event.target instanceof HTMLElement &&
-    event.target.tagName === "DIV" &&
     event.target.classList.contains("ql-editor") &&
-    event.target.contentEditable === "true"
+    event.target.isContentEditable
   ) {
     event.stopPropagation();
   }

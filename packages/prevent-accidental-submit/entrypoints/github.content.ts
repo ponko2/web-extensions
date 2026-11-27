@@ -5,10 +5,9 @@ const handleKeyDown = (event: KeyboardEvent) => {
   if (
     !isComposing &&
     event.isTrusted &&
-    event.code === "Enter" &&
+    event.key === "Enter" &&
     !(event.ctrlKey || event.metaKey) &&
-    event.target instanceof HTMLElement &&
-    event.target.tagName === "TEXTAREA"
+    event.target instanceof HTMLTextAreaElement
   ) {
     event.stopPropagation();
   }
@@ -16,7 +15,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
 
 export default defineContentScript({
   runAt: "document_end",
-  matches: ["*://*.github.com/*", "*://github.com/*"],
+  matches: ["*://*.github.com/*"],
   main(ctx) {
     ctx.addEventListener(document, "keydown", handleKeyDown, { capture: true });
   },
