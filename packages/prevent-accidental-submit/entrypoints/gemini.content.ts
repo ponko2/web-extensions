@@ -8,7 +8,6 @@ const handleKeyDown = (event: KeyboardEvent) => {
     event.key === "Enter" &&
     !(event.ctrlKey || event.metaKey) &&
     event.target instanceof HTMLElement &&
-    event.target.tagName === "DIV" &&
     event.target.classList.contains("ql-editor") &&
     event.target.isContentEditable
   ) {
