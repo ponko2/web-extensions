@@ -16,7 +16,6 @@ This extension intercepts `keydown` events in supported input areas and adjusts 
 
 This extension works with:
 
-- ChatGPT
 - Claude
 - Gemini
 - GitHub
