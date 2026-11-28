@@ -1,17 +1,19 @@
 const selectors = [
   // Open all resolved comment threads
-  'details[data-resolved="true"]:not([open])',
+  'button[data-telemetry-action="pull_requests.thread.expand"]',
+  'button[data-action="click:review-thread-collapsible#toggle"][aria-expanded="false"]',
   // Close all resolved comment threads
-  'details[data-resolved="true"][open]',
+  'button[data-telemetry-action="pull_requests.thread.collapse"]',
+  'button[data-action="click:review-thread-collapsible#toggle"][aria-expanded="true"]',
   // Mark all files as viewed
-  'button[class*="MarkAsViewedButton"][aria-pressed="false"]',
+  'button[data-telemetry-action="pull_requests.diff.toggle_viewed"][aria-pressed="false"]',
   "input.js-reviewed-checkbox:not(:checked)",
   // Mark all files as unviewed
-  'button[class*="MarkAsViewedButton"][aria-pressed="true"]',
+  'button[data-telemetry-action="pull_requests.diff.toggle_viewed"][aria-pressed="true"]',
   "input.js-reviewed-checkbox:checked",
   // Load all hidden diffs
-  '[class^="HiddenDiffPatch"] button',
-  ".js-file .js-diff-load",
+  'button[data-telemetry-action="pull_requests.diff.load_more"]',
+  "button.load-diff-button",
 ];
 
 const handleClick = (event: MouseEvent) => {
