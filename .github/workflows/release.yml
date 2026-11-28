@@ -50,14 +50,14 @@ jobs:
       - name: Generate SHA-256 checksums
         run: |
           for file in packages/*/.output/*.zip; do
-            shasum --algorithm 256 "$file" | sed "s|$file|$(basename "$file")|" > "$file.sha256"
-          done
+            (cd "$(dirname "$file")" && shasum --algorithm 256 "$(basename "$file")")
+          done > SHASUMS256.txt
         shell: bash
       - name: Upload release assets
         env:
           GH_TOKEN: ${{ github.token }}
           TAG_NAME: ${{ needs.release-please.outputs.tag_name }}
-        run: gh release upload "$TAG_NAME" packages/*/.output/*.zip packages/*/.output/*.zip.sha256
+        run: gh release upload "$TAG_NAME" packages/*/.output/*.zip SHASUMS256.txt
         shell: bash
   publish-release:
     name: Publish Release
