@@ -5,7 +5,7 @@ allowBuilds:
   spawn-sync: true
 catalog:
   "@tsconfig/strictest": 2.0.9
-  "@types/node": 24.19.2
+  "@types/node": 24.19.3
   "@wxt-dev/storage": ^1.4.0
   typescript: 7.0.2
   vite: npm:@voidzero-dev/vite-plus-core@8.3.8001
