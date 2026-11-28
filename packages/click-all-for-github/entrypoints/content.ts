@@ -35,7 +35,7 @@ const handleClick = (event: MouseEvent) => {
 
 export default defineContentScript({
   runAt: "document_end",
-  matches: ["*://*.github.com/*", "*://github.com/*"],
+  matches: ["*://*.github.com/*"],
   main(ctx) {
     ctx.addEventListener(document, "click", handleClick, { capture: true });
   },
