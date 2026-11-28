@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    ".": {
+      "extra-files": [
+        "packages/click-all-for-github/package.json",
+        "packages/prevent-accidental-submit/package.json"
+      ]
+    }
+  },
+  "release-type": "node",
+  "skip-changelog": true,
+  "draft": true,
+  "force-tag-creation": true,
+  "include-component-in-tag": false
+}

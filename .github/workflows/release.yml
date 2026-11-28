@@ -1,0 +1,77 @@
+name: Release
+on:
+  push:
+    branches: [main]
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  release-please:
+    name: Release Please
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    permissions:
+      contents: write # Release Please creates release pull requests, tags, and GitHub releases.
+      issues: write # Release Please updates issues when managing release pull requests.
+      pull-requests: write # Release Please creates and updates release pull requests.
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - name: Run Release Please
+        id: release
+        uses: googleapis/release-please-action@v5.0.0
+  upload-assets:
+    name: Upload Assets
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    runs-on: ubuntu-26.04
+    timeout-minutes: 20
+    permissions:
+      contents: write # The upload step attaches built archives and checksums to the GitHub release.
+    steps:
+      - name: Check out release tag
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ needs.release-please.outputs.tag_name }}
+      - name: Set up Vite+
+        uses: voidzero-dev/setup-vp@v1.22.0
+        with:
+          cache: true
+          node-version-file: package.json
+      - name: Build Chrome zip
+        run: vp run -r zip
+        shell: bash
+      - name: Build Firefox zip
+        run: vp run -r zip:firefox
+        shell: bash
+      - name: Generate SHA-256 checksums
+        run: |
+          for file in packages/*/.output/*.zip; do
+            shasum --algorithm 256 "$file" | sed "s|$file|$(basename "$file")|" > "$file.sha256"
+          done
+        shell: bash
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ needs.release-please.outputs.tag_name }}
+        run: gh release upload "$TAG_NAME" packages/*/.output/*.zip packages/*/.output/*.zip.sha256
+        shell: bash
+  publish-release:
+    name: Publish Release
+    needs: [release-please, upload-assets]
+    if: ${{ needs.release-please.outputs.release_created }}
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    permissions:
+      contents: write # Publishes the release after all assets have been uploaded.
+    steps:
+      - name: Publish GitHub Release
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ needs.release-please.outputs.tag_name }}
+        run: gh release edit "$TAG_NAME" --draft=false
+        shell: bash
