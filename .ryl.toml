@@ -43,8 +43,9 @@ forbid-explicit-octal = false
 forbid-implicit-octal = true
 
 [lint.rules.quoted-strings]
+allow-double-quotes-for-escaping = true
 allow-quoted-quotes = true
-quote-type = "double"
+quote-type = "any"
 required = "only-when-needed"
 
 [lint.rules.truthy]
